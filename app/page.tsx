@@ -1,5 +1,8 @@
 
 import Navbar from "./components/Navbar";
+import HeroVisual from "./components/HeroVisual";
+import About from "./components/About";
+import Experience from "./components/Experience";
 
 export default function Home() {
   return (
@@ -37,15 +40,15 @@ export default function Home() {
   aria-hidden="true"
 />
 
-  <div className="mx-auto w-full max-w-6xl">
-    <div className="max-w-5xl">
+<div className="mx-auto w-full max-w-6xl">
+  <div className="grid items-center gap-12 lg:grid-cols-[1fr_0.85fr] lg:gap-8">
+
+    {/* Left side */}
+    <div className="max-w-3xl">
 
       {/* Status */}
       <div className="mb-8 flex items-center gap-3">
-        <span
-          className="relative flex h-2.5 w-2.5"
-          aria-hidden="true"
-        >
+        <span className="relative flex h-2.5 w-2.5">
           <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-40" />
           <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-green-400" />
         </span>
@@ -56,75 +59,113 @@ export default function Home() {
       </div>
 
       {/* Heading */}
-      <h1 className="max-w-5xl text-5xl font-semibold leading-[0.98] tracking-[-0.04em] sm:text-6xl md:text-7xl lg:text-[6.5rem]">
+      <h1 className="text-5xl font-semibold leading-[0.96] tracking-[-0.045em] sm:text-6xl md:text-7xl lg:text-[5.8rem]">
         I&apos;m Om More.
         <br />
+
         <span className="text-white/35">
           I build things
         </span>
+
         <br />
+
         that matter.
       </h1>
 
       {/* Description */}
       <p className="mt-8 max-w-2xl text-base leading-7 text-white/45 sm:text-lg sm:leading-8">
         Computer Science Engineering student at MIT-ADT University,
-        Web Development Technical Lead at IEEE, and a developer
-        building across software, AI, IoT, and the web.
+        Web Development Technical Lead at IEEE, and a builder exploring
+        software, AI, IoT, backend systems, and the web.
       </p>
 
       {/* Actions */}
       <div className="mt-10 flex flex-col gap-3 sm:flex-row">
         <a
           href="#projects"
-          className="group inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-medium text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/90"
+          className="
+            group inline-flex items-center justify-center
+            rounded-full bg-white px-6 py-3
+            text-sm font-medium text-black
+            transition-all duration-300
+            hover:-translate-y-0.5 hover:bg-white/90
+          "
         >
           View my work
-          <span className="ml-2 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
+
+          <span className="ml-2 transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1">
             ↗
           </span>
         </a>
 
         <a
-          href="#contact"
-          className="inline-flex items-center justify-center rounded-full border border-white/15 px-6 py-3 text-sm font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:border-white/30 hover:bg-white/5"
+          href="https://github.com/omkailasmore"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="
+            inline-flex items-center justify-center
+            rounded-full border border-white/10
+            px-6 py-3
+            text-sm font-medium text-white/75
+            transition-all duration-300
+            hover:-translate-y-0.5
+            hover:border-white/25
+            hover:bg-white/[0.04]
+            hover:text-white
+          "
         >
-          Let&apos;s connect
+          GitHub
+          <span className="ml-2 text-white/30">↗</span>
         </a>
       </div>
 
       {/* Quick facts */}
-      <div className="mt-20 grid max-w-2xl grid-cols-2 gap-x-8 gap-y-8 border-t border-white/10 pt-8 sm:grid-cols-4">
+      <div className="mt-16 grid max-w-2xl grid-cols-2 gap-x-8 gap-y-7 border-t border-white/10 pt-7 sm:grid-cols-4">
         <div>
-          <p className="text-2xl font-semibold tracking-tight">IEEE</p>
-          <p className="mt-1 text-xs text-white/35">
+          <p className="text-xl font-semibold tracking-tight">
+            IEEE
+          </p>
+          <p className="mt-1 text-[11px] text-white/30">
             Web Development
           </p>
         </div>
 
         <div>
-          <p className="text-2xl font-semibold tracking-tight">SIH</p>
-          <p className="mt-1 text-xs text-white/35">
+          <p className="text-xl font-semibold tracking-tight">
+            SIH
+          </p>
+          <p className="mt-1 text-[11px] text-white/30">
             Top 100 · 2025
           </p>
         </div>
 
         <div>
-          <p className="text-2xl font-semibold tracking-tight">4+</p>
-          <p className="mt-1 text-xs text-white/35">
-            Featured Projects
+          <p className="text-xl font-semibold tracking-tight">
+            CSE
+          </p>
+          <p className="mt-1 text-[11px] text-white/30">
+            MIT-ADT
           </p>
         </div>
 
         <div>
-          <p className="text-2xl font-semibold tracking-tight">CSE</p>
-          <p className="mt-1 text-xs text-white/35">
-            MIT-ADT University
+          <p className="text-xl font-semibold tracking-tight">
+            2026
+          </p>
+          <p className="mt-1 text-[11px] text-white/30">
+            Building daily
           </p>
         </div>
       </div>
     </div>
+
+    {/* Right side */}
+    <div className="hidden lg:flex lg:justify-end">
+      <HeroVisual />
+    </div>
+
   </div>
+</div>
 
   {/* Scroll indicator */}
   <a
