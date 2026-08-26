@@ -9,12 +9,12 @@ const systems = [
     items: ["React", "Next.js", "TypeScript"],
   },
   {
-    label: "BACKEND",
-    items: ["Node.js", "SQL", "APIs"],
+    label: "BUILD",
+    items: ["C++", "Git", "Problem Solving"],
   },
   {
-    label: "BUILDING",
-    items: ["AWS", "DevOps", "DSA"],
+    label: "EXPLORE",
+    items: ["Node.js", "AWS", "AI / IoT"],
   },
 ];
 
@@ -44,140 +44,168 @@ export default function HeroVisual() {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveSystem((current) => (current + 1) % systems.length);
-    }, 3500);
+    }, 4000);
 
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="relative h-[560px] w-full max-w-[520px]">
-      {/* Ambient glow */}
+    <div className="relative h-[480px] w-full max-w-[420px] sm:h-[520px] sm:max-w-[480px] lg:h-[560px] lg:max-w-[520px]">
+
+      {/* Ambient atmosphere */}
       <div
         className="
           absolute left-1/2 top-1/2
-          h-[380px] w-[380px]
+          h-[460px] w-[min(390px,calc(100vw-3rem))]
           -translate-x-1/2 -translate-y-1/2
           rounded-full
-          bg-blue-500/[0.07]
-          blur-[110px]
+          bg-blue-500/[0.055]
+          blur-[120px]
         "
         aria-hidden="true"
       />
 
-      {/* Orbital rings */}
+      {/* Outer orbital ring */}
       <div
         className="
-          absolute left-1/2 top-[45%]
-          h-[420px] w-[420px]
+          absolute left-1/2 top-[46%]
+          h-[500px] w-[500px]
           -translate-x-1/2 -translate-y-1/2
           rounded-full
-          border border-blue-400/[0.08]
+          border border-white/[0.035]
         "
+        aria-hidden="true"
       />
 
+      {/* Small orbital accent */}
       <div
         className="
-          absolute left-1/2 top-[45%]
-          h-[330px] w-[330px]
+          absolute left-1/2 top-[46%]
+          h-[430px] w-[430px]
           -translate-x-1/2 -translate-y-1/2
           rounded-full
-          border border-white/[0.05]
+          border border-blue-400/[0.055]
         "
+        aria-hidden="true"
       />
 
-      {/* Main profile panel */}
+      {/* Floating top label */}
+      <div className="absolute right-4 top-[55px] hidden sm:block">
+        <div className="flex items-center gap-2">
+          <span className="h-1.5 w-1.5 rounded-full bg-blue-400" />
+          <span className="font-mono text-[9px] uppercase tracking-[0.25em] text-white/25">
+            PERSONAL_SYSTEM
+          </span>
+        </div>
+      </div>
+
+      {/* Main card */}
       <div
         className="
-          absolute left-1/2 top-[45%]
-          w-[390px]
+          absolute left-1/2 top-[46%]
+          w-[430px]
+          max-w-[calc(100%-24px)]
           -translate-x-1/2 -translate-y-1/2
           overflow-hidden
-          rounded-[28px]
-          border border-white/[0.12]
-          bg-[#070a10]/90
-          shadow-2xl shadow-black/60
+          rounded-[30px]
+          border border-white/[0.11]
+          bg-[#07090f]/95
+          shadow-[0_30px_100px_rgba(0,0,0,0.55)]
           backdrop-blur-2xl
+          transition-transform
+          duration-500
+          hover:-translate-y-[calc(50%+4px)]
         "
       >
-        {/* Header */}
-        <div className="relative z-20 flex items-center justify-between border-b border-white/[0.08] px-5 py-4">
-          <div className="flex items-center gap-2">
-            <span className="h-1.5 w-1.5 rounded-full bg-blue-400 shadow-[0_0_10px_rgba(96,165,250,0.8)]" />
 
-            <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-white/50">
-              om.system
+        {/* Top bar */}
+        <div className="flex items-center justify-between border-b border-white/[0.07] px-5 py-4">
+
+          <div className="flex items-center gap-3">
+            <div className="flex gap-1">
+              <span className="h-1.5 w-1.5 rounded-full bg-white/20" />
+              <span className="h-1.5 w-1.5 rounded-full bg-white/10" />
+              <span className="h-1.5 w-1.5 rounded-full bg-white/10" />
+            </div>
+
+            <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-white/35">
+              om.codes.dev
             </span>
           </div>
 
           <div className="flex items-center gap-2">
-            <span className="font-mono text-[9px] text-white/25">
+            <span className="font-mono text-[9px] text-white/20">
               {time || "--:--:--"}
             </span>
 
-            <span className="h-1.5 w-1.5 rounded-full bg-green-400" />
+            <span className="h-1.5 w-1.5 rounded-full bg-green-400 shadow-[0_0_10px_rgba(74,222,128,0.7)]" />
 
-            <span className="font-mono text-[9px] text-green-400/70">
-              ONLINE
+            <span className="font-mono text-[8px] uppercase tracking-wider text-green-400/60">
+              Online
             </span>
           </div>
         </div>
 
         {/* Photo */}
-        <div className="relative h-[310px] overflow-hidden">
-          {/* Photo */}
+        <div className="relative h-[340px] overflow-hidden">
+
           <Image
             src="/om-more.jpg"
             alt="Om More"
             fill
             priority
-            sizes="390px"
+            sizes="430px"
             className="
               object-cover
-              object-[center_25%]
-              grayscale-[15%]
-              contrast-[1.05]
+              object-[center_22%]
+              grayscale-[8%]
+              contrast-[1.04]
+              transition-transform
+              duration-700
+              hover:scale-[1.025]
             "
           />
 
-          {/* Dark cinematic gradient */}
+          {/* Cinematic gradient */}
           <div
             className="
               absolute inset-0
               bg-gradient-to-t
-              from-[#070a10]
+              from-[#07090f]
               via-transparent
-              to-black/10
+              to-black/5
             "
           />
 
-          {/* Blue atmosphere */}
+          {/* Subtle blue tint */}
           <div
             className="
               absolute inset-0
-              bg-[radial-gradient(circle_at_55%_45%,rgba(59,130,246,0.12),transparent_45%)]
+              bg-[radial-gradient(circle_at_65%_35%,rgba(59,130,246,0.10),transparent_45%)]
             "
           />
 
-          {/* Technical scan line */}
-          <div className="absolute left-0 right-0 top-[42%] h-px bg-blue-400/20" />
+          {/* Scan line */}
+          <div className="absolute left-0 right-0 top-[40%] h-px bg-white/[0.07]" />
 
-          {/* Photo metadata */}
+          {/* Profile identifier */}
           <div className="absolute left-5 top-5">
-            <p className="font-mono text-[8px] uppercase tracking-[0.25em] text-white/35">
+            <p className="font-mono text-[8px] uppercase tracking-[0.3em] text-white/35">
               PROFILE / 001
             </p>
 
-            <p className="mt-1 font-mono text-[9px] text-blue-300/60">
-              HUMAN_INTERFACE
+            <p className="mt-1 font-mono text-[8px] uppercase tracking-[0.2em] text-blue-300/50">
+              CSE · BUILDER
             </p>
           </div>
 
+          {/* Bottom identity */}
           <div className="absolute bottom-5 left-5">
-            <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-white/35">
+            <p className="font-mono text-[9px] uppercase tracking-[0.25em] text-white/35">
               OM MORE
             </p>
 
-            <p className="mt-1 text-xs text-white/60">
+            <p className="mt-1 text-sm text-white/65">
               Developer · Technical Lead
             </p>
           </div>
@@ -187,88 +215,128 @@ export default function HeroVisual() {
           </div>
         </div>
 
-        {/* System tabs */}
-        <div className="grid grid-cols-3 border-y border-white/[0.08]">
+        {/* System navigation */}
+        <div className="grid grid-cols-3 border-y border-white/[0.07]">
+
           {systems.map((system, index) => (
             <button
               key={system.label}
               type="button"
               onClick={() => setActiveSystem(index)}
               className={`
-                px-3 py-3
-                font-mono text-[9px]
-                uppercase tracking-[0.15em]
+                relative px-3 py-3
+                font-mono text-[8px]
+                uppercase tracking-[0.2em]
                 transition-all duration-300
                 ${
                   activeSystem === index
-                    ? "bg-blue-400/[0.06] text-blue-300"
-                    : "text-white/25 hover:bg-white/[0.03] hover:text-white/50"
+                    ? "bg-blue-400/[0.045] text-blue-300/80"
+                    : "text-white/25 hover:bg-white/[0.025] hover:text-white/50"
                 }
               `}
             >
               {system.label}
+
+              {activeSystem === index && (
+                <span className="absolute bottom-0 left-1/2 h-px w-8 -translate-x-1/2 bg-blue-400/70" />
+              )}
             </button>
           ))}
+
         </div>
 
         {/* Active system */}
-        <div className="px-5 py-4">
-          <div className="mb-3 flex items-center gap-2">
-            <span className="h-1 w-1 rounded-full bg-blue-400" />
+        <div className="px-5 py-5">
 
-            <span className="font-mono text-[8px] uppercase tracking-[0.2em] text-white/30">
-              {systems[activeSystem].label} / STACK
+          <div className="mb-4 flex items-center justify-between">
+
+            <div className="flex items-center gap-2">
+              <span className="h-1 w-1 rounded-full bg-blue-400" />
+
+              <span className="font-mono text-[8px] uppercase tracking-[0.25em] text-white/25">
+                {systems[activeSystem].label} / STACK
+              </span>
+            </div>
+
+            <span className="font-mono text-[8px] text-white/15">
+              0{activeSystem + 1}
             </span>
+
           </div>
 
-          <div className="grid grid-cols-3 gap-3">
+          <div className="grid grid-cols-3 gap-2">
+
             {systems[activeSystem].items.map((item) => (
               <div
                 key={item}
                 className="
-                  rounded-lg
+                  rounded-xl
                   border border-white/[0.06]
-                  bg-white/[0.025]
-                  px-3 py-2
+                  bg-white/[0.02]
+                  px-3 py-2.5
+                  transition
+                  hover:border-white/[0.12]
+                  hover:bg-white/[0.04]
                 "
               >
-                <p className="text-[10px] text-white/55">
+                <p className="text-[10px] text-white/50">
                   {item}
                 </p>
               </div>
             ))}
+
           </div>
         </div>
 
         {/* Footer */}
-        <div className="flex items-center justify-between border-t border-white/[0.08] px-5 py-3">
+        <div className="flex items-center justify-between border-t border-white/[0.07] px-5 py-3">
+
           <span className="font-mono text-[8px] uppercase tracking-[0.15em] text-white/20">
             MIT-ADT · IEEE
           </span>
 
-          <span className="font-mono text-[8px] text-white/20">
+          <span className="font-mono text-[8px] text-white/15">
             BUILD_∞
           </span>
+
         </div>
+
       </div>
 
-      {/* Floating technical labels */}
-      <div className="absolute left-0 top-[120px]">
-        <span className="font-mono text-[8px] uppercase tracking-[0.2em] text-white/15">
+      {/* Left technical label */}
+      <div className="absolute left-0 top-[175px] hidden sm:block">
+        <span className="font-mono text-[8px] uppercase tracking-[0.25em] text-white/15">
           SYS_01
         </span>
       </div>
 
-      <div className="absolute right-0 top-[175px]">
-        <span className="font-mono text-[8px] uppercase tracking-[0.2em] text-white/15">
+      {/* Right technical label */}
+      <div className="absolute right-0 top-[240px] hidden sm:block">
+        <span className="font-mono text-[8px] uppercase tracking-[0.25em] text-white/15">
           CSE_2026
         </span>
       </div>
 
       {/* Floating nodes */}
-      <span className="absolute left-[35px] top-[220px] h-1 w-1 rounded-full bg-blue-400/60" />
+      <span className="absolute left-[28px] top-[275px] h-1 w-1 rounded-full bg-blue-400/60" />
 
-      <span className="absolute right-[35px] bottom-[180px] h-1.5 w-1.5 rounded-full bg-blue-300/70 shadow-[0_0_12px_rgba(96,165,250,0.7)]" />
+      <span
+        className="
+          absolute right-[22px] bottom-[175px]
+          h-1.5 w-1.5
+          rounded-full
+          bg-blue-300/70
+          shadow-[0_0_14px_rgba(96,165,250,0.7)]
+        "
+      />
+
+      {/* Tiny coordinate marker */}
+      <div className="absolute bottom-[55px] left-[25px] hidden sm:block">
+        <span className="font-mono text-[8px] text-white/10">
+          18.5204° N · 73.8567° E
+        </span>
+      </div>
+
     </div>
   );
 }

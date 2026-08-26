@@ -82,21 +82,22 @@ export default function Home() {
       {/* Actions */}
       <div className="mt-10 flex flex-col gap-3 sm:flex-row">
         <a
-          href="#projects"
-          className="
-            group inline-flex items-center justify-center
-            rounded-full bg-white px-6 py-3
-            text-sm font-medium text-black
-            transition-all duration-300
-            hover:-translate-y-0.5 hover:bg-white/90
-          "
-        >
-          View my work
+  href="#projects"
+  className="
+    group inline-flex items-center justify-center
+    rounded-full bg-white px-6 py-3
+    text-sm font-semibold text-black
+    transition-all duration-300
+    hover:-translate-y-0.5 hover:bg-white/90
+    hover:shadow-lg hover:shadow-white/10
+  "
+>
+  <span className="text-black">View my work</span>
 
-          <span className="ml-2 transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1">
-            ↗
-          </span>
-        </a>
+  <span className="ml-2 text-black transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1">
+    ↗
+  </span>
+</a>
 
         <a
           href="https://github.com/omkailasmore"
@@ -159,10 +160,10 @@ export default function Home() {
       </div>
     </div>
 
-    {/* Right side */}
-    <div className="hidden lg:flex lg:justify-end">
-      <HeroVisual />
-    </div>
+  {/* Right side */}
+<div className="flex justify-center lg:justify-end">
+  <HeroVisual />
+</div>
 
   </div>
 </div>
@@ -288,164 +289,352 @@ export default function Home() {
         </section>
 
         {/* Projects */}
-        <section
-          id="projects"
-          className="border-t border-white/10 px-6 py-32"
-        >
-          <div className="mx-auto max-w-6xl">
-            <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
-              <div>
-                <p className="text-sm uppercase tracking-[0.25em] text-white/30">
-                  Selected Work
-                </p>
+<section
+  id="projects"
+  className="border-t border-white/10 px-6 py-32"
+>
+  <div className="mx-auto max-w-6xl">
+    {/* Section heading */}
+    <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
+      <div>
+        <p className="text-sm uppercase tracking-[0.25em] text-white/30">
+          Selected Work
+        </p>
 
-                <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
-                  Things I&apos;ve built.
-                </h2>
-              </div>
+        <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
+          Things I&apos;ve built.
+        </h2>
+      </div>
 
-              <p className="max-w-md text-sm leading-6 text-white/40">
-                Projects exploring software, hardware, AI, computer vision,
-                and real-world problem solving.
+      <p className="max-w-md text-sm leading-6 text-white/40">
+        Projects built around real problems, technical experimentation,
+        and learning by doing.
+      </p>
+    </div>
+
+    {/* Project grid */}
+    <div className="mt-16 grid gap-5 md:grid-cols-2">
+
+      {/* ───────────────── JOURNEASE ───────────────── */}
+      <article
+        className="
+          group relative overflow-hidden rounded-3xl
+          border border-white/10
+          bg-white/[0.02]
+          p-8
+          transition-all duration-500
+          hover:-translate-y-1
+          hover:border-white/20
+          hover:bg-white/[0.04]
+          hover:shadow-2xl hover:shadow-black/30
+        "
+      >
+        {/* Accent */}
+        <div
+          className="
+            pointer-events-none absolute -right-20 -top-20
+            h-48 w-48 rounded-full
+            bg-blue-500/[0.08]
+            blur-3xl
+            transition duration-500
+            group-hover:bg-blue-500/[0.13]
+          "
+        />
+
+        <div className="relative">
+          <div className="flex items-center justify-between">
+            <p className="text-xs uppercase tracking-[0.2em] text-white/30">
+              Smart India Hackathon · 2025
+            </p>
+
+            <span className="rounded-full border border-white/10 px-3 py-1 text-[10px] text-white/35">
+              TOP 100
+            </span>
+          </div>
+
+          <a
+  href="https://journeasesih.vercel.app/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mt-3 flex items-start justify-between gap-4"
+>
+  <h3 className="text-2xl font-semibold">Journease</h3>
+
+  <span className="text-white/30 transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-white">
+    ↗
+  </span>
+</a>
+
+          <p className="mt-7 max-w-xl leading-7 text-white/50">
+            A smart travel companion built for the Smart India Hackathon,
+            designed to automatically track journeys, map routes, analyze
+            travel data, and generate useful reports.
+          </p>
+
+          <div className="mt-7 flex flex-wrap gap-2">
+            {[
+              "AI",
+              "Travel Analytics",
+              "Route Mapping",
+              "Cloud",
+              "Mobile",
+            ].map((technology) => (
+              <span
+                key={technology}
+                className="rounded-full bg-white/5 px-3 py-1.5 text-xs text-white/40"
+              >
+                {technology}
+              </span>
+            ))}
+          </div>
+
+          <div className="mt-8 flex items-center gap-5 border-t border-white/[0.07] pt-6">
+            <a
+              href="https://journeasesih.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-medium text-white transition hover:text-white/70"
+            >
+              View project ↗
+            </a>
+
+            <span className="text-white/10">/</span>
+
+            <a
+              href="https://github.com/omkailasmore"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-white/35 transition hover:text-white"
+            >
+              GitHub ↗
+            </a>
+          </div>
+        </div>
+      </article>
+
+      {/* ───────────────── DRIVESAFE ───────────────── */}
+      <article
+        className="
+          group relative overflow-hidden rounded-3xl
+          border border-white/10
+          bg-white/[0.02]
+          p-8
+          transition-all duration-500
+          hover:-translate-y-1
+          hover:border-white/20
+          hover:bg-white/[0.04]
+          hover:shadow-2xl hover:shadow-black/30
+        "
+      >
+        <div
+          className="
+            pointer-events-none absolute -right-20 -top-20
+            h-48 w-48 rounded-full
+            bg-cyan-500/[0.06]
+            blur-3xl
+            transition duration-500
+            group-hover:bg-cyan-500/[0.11]
+          "
+        />
+
+        <div className="relative">
+          <p className="text-xs uppercase tracking-[0.2em] text-white/30">
+            Computer Vision · IoT
+          </p>
+
+          <a
+  href="https://roaring-torte-d9b0a2.netlify.app/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mt-3 flex items-start justify-between gap-4"
+>
+  <h3 className="text-2xl font-semibold">DriveSafe</h3>
+
+  <span className="text-white/30 transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-white">
+    ↗
+  </span>
+</a>
+          <p className="mt-7 max-w-xl leading-7 text-white/50">
+            An IoT-assisted driver safety system that uses camera-based eye
+            analysis and Eye Aspect Ratio (EAR) detection to identify
+            drowsiness and trigger connected hardware responses.
+          </p>
+
+          <div className="mt-7 flex flex-wrap gap-2">
+            {[
+              "Computer Vision",
+              "EAR",
+              "ESP8266",
+              "IoT",
+              "Hardware",
+            ].map((technology) => (
+              <span
+                key={technology}
+                className="rounded-full bg-white/5 px-3 py-1.5 text-xs text-white/40"
+              >
+                {technology}
+              </span>
+            ))}
+          </div>
+
+          <div className="mt-8 flex items-center gap-5 border-t border-white/[0.07] pt-6">
+            <a
+              href="https://roaring-torte-d9b0a2.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-medium text-white transition hover:text-white/70"
+            >
+              View project ↗
+            </a>
+
+            <span className="text-white/10">/</span>
+
+            <span className="text-sm text-white/25">
+              Pratibhuti Exhibition
+            </span>
+          </div>
+        </div>
+      </article>
+
+      {/* ───────────────── SAHAAY ───────────────── */}
+      <article
+        className="
+          group relative overflow-hidden rounded-3xl
+          border border-white/10
+          bg-white/[0.02]
+          p-8
+          transition-all duration-500
+          hover:-translate-y-1
+          hover:border-white/20
+          hover:bg-white/[0.04]
+          hover:shadow-2xl hover:shadow-black/30
+        "
+      >
+        <div className="relative">
+          <p className="text-xs uppercase tracking-[0.2em] text-white/30">
+            Design Thinking · Exhibition
+          </p>
+
+          <div className="mt-5 flex items-start justify-between gap-4">
+            <div>
+              <h3 className="text-3xl font-semibold tracking-tight">
+                Sahaay
+              </h3>
+
+              <p className="mt-2 text-sm text-white/35">
+                Women&apos;s Safety Application
               </p>
             </div>
 
-            <div className="mt-16 grid gap-6 md:grid-cols-2">
-              {/* DriveSafe */}
-              <article className="group rounded-3xl border border-white/10 bg-white/[0.02] p-8 transition duration-300 hover:border-white/20 hover:bg-white/[0.04]">
-                <p className="text-xs uppercase tracking-[0.2em] text-white/30">
-                  Computer Vision · IoT
-                </p>
-
-                <div className="mt-3 flex items-start justify-between gap-4">
-                  <h3 className="text-2xl font-semibold">DriveSafe</h3>
-                  <span className="text-white/30 transition group-hover:text-white">
-                    ↗
-                  </span>
-                </div>
-
-                <p className="mt-6 leading-7 text-white/50">
-                  An IoT-assisted driver safety system designed to detect
-                  drowsiness using camera-based eye analysis and respond
-                  through connected hardware.
-                </p>
-
-                <div className="mt-8 flex flex-wrap gap-2">
-                  {[
-                    "Computer Vision",
-                    "EAR",
-                    "ESP32",
-                    "IoT",
-                  ].map((technology) => (
-                    <span
-                      key={technology}
-                      className="rounded-full bg-white/5 px-3 py-1.5 text-xs text-white/40"
-                    >
-                      {technology}
-                    </span>
-                  ))}
-                </div>
-              </article>
-
-              {/* Journease */}
-              <article className="group rounded-3xl border border-white/10 bg-white/[0.02] p-8 transition duration-300 hover:border-white/20 hover:bg-white/[0.04]">
-                <p className="text-xs uppercase tracking-[0.2em] text-white/30">
-                  Smart India Hackathon 2025
-                </p>
-
-                <div className="mt-3 flex items-start justify-between gap-4">
-                  <h3 className="text-2xl font-semibold">Journease</h3>
-                  <span className="text-white/30 transition group-hover:text-white">
-                    ↗
-                  </span>
-                </div>
-
-                <p className="mt-6 leading-7 text-white/50">
-                  A smart travel companion designed to help users manage
-                  journeys, expenses, routes, analytics, and travel data with
-                  integrated AI functionality.
-                </p>
-
-                <div className="mt-8 flex flex-wrap gap-2">
-                  {["AI", "Travel", "Analytics", "Web"].map((technology) => (
-                    <span
-                      key={technology}
-                      className="rounded-full bg-white/5 px-3 py-1.5 text-xs text-white/40"
-                    >
-                      {technology}
-                    </span>
-                  ))}
-                </div>
-              </article>
-
-              {/* Sahaay */}
-              <article className="group rounded-3xl border border-white/10 bg-white/[0.02] p-8 transition duration-300 hover:border-white/20 hover:bg-white/[0.04]">
-                <p className="text-xs uppercase tracking-[0.2em] text-white/30">
-                  Design Thinking
-                </p>
-
-                <div className="mt-3 flex items-start justify-between gap-4">
-                  <h3 className="text-2xl font-semibold">Sahaay</h3>
-                  <span className="text-white/30 transition group-hover:text-white">
-                    ↗
-                  </span>
-                </div>
-
-                <p className="mt-6 leading-7 text-white/50">
-                  A women&apos;s safety application designed around real-world
-                  situations involving cabs, public transportation, and
-                  ride-hailing services.
-                </p>
-
-                <div className="mt-8 flex flex-wrap gap-2">
-                  {["Safety", "Design Thinking", "Application"].map(
-                    (technology) => (
-                      <span
-                        key={technology}
-                        className="rounded-full bg-white/5 px-3 py-1.5 text-xs text-white/40"
-                      >
-                        {technology}
-                      </span>
-                    )
-                  )}
-                </div>
-              </article>
-
-              {/* ScholarAI */}
-              <article className="group rounded-3xl border border-white/10 bg-white/[0.02] p-8 transition duration-300 hover:border-white/20 hover:bg-white/[0.04]">
-                <p className="text-xs uppercase tracking-[0.2em] text-white/30">
-                  In Development
-                </p>
-
-                <div className="mt-3 flex items-start justify-between gap-4">
-                  <h3 className="text-2xl font-semibold">ScholarAI</h3>
-                  <span className="text-white/30 transition group-hover:text-white">
-                    ↗
-                  </span>
-                </div>
-
-                <p className="mt-6 leading-7 text-white/50">
-                  An academic-focused application currently being developed
-                  while exploring modern mobile development, TypeScript, and
-                  AI-powered functionality.
-                </p>
-
-                <div className="mt-8 flex flex-wrap gap-2">
-                  {["React Native", "Expo", "TypeScript", "AI"].map(
-                    (technology) => (
-                      <span
-                        key={technology}
-                        className="rounded-full bg-white/5 px-3 py-1.5 text-xs text-white/40"
-                      >
-                        {technology}
-                      </span>
-                    )
-                  )}
-                </div>
-              </article>
-            </div>
+            <span className="text-xl text-white/20 transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-white">
+              ↗
+            </span>
           </div>
-        </section>
+
+          <p className="mt-7 max-w-xl leading-7 text-white/50">
+            A safety-focused application designed around real-world travel
+            situations involving cabs, public transportation, and
+            ride-hailing services.
+          </p>
+
+          <div className="mt-7 flex flex-wrap gap-2">
+            {[
+              "Safety",
+              "Design Thinking",
+              "Problem Solving",
+              "Application",
+            ].map((technology) => (
+              <span
+                key={technology}
+                className="rounded-full bg-white/5 px-3 py-1.5 text-xs text-white/40"
+              >
+                {technology}
+              </span>
+            ))}
+          </div>
+
+          <div className="mt-8 border-t border-white/[0.07] pt-6">
+            <span className="text-sm text-white/30">
+              Selected for Pratibhuti Exhibition
+            </span>
+          </div>
+        </div>
+      </article>
+
+      {/* ───────────────── SCHOLAR AI ───────────────── */}
+      <article
+        className="
+          group relative overflow-hidden rounded-3xl
+          border border-white/10
+          bg-white/[0.02]
+          p-8
+          transition-all duration-500
+          hover:-translate-y-1
+          hover:border-white/20
+          hover:bg-white/[0.04]
+          hover:shadow-2xl hover:shadow-black/30
+        "
+      >
+        <div className="relative">
+          <div className="flex items-center justify-between">
+            <p className="text-xs uppercase tracking-[0.2em] text-white/30">
+              In Development
+            </p>
+
+            <span className="flex items-center gap-2 text-[10px] uppercase tracking-wider text-green-400/60">
+              <span className="h-1.5 w-1.5 rounded-full bg-green-400" />
+              Building
+            </span>
+          </div>
+
+          <div className="mt-5 flex items-start justify-between gap-4">
+            <div>
+              <h3 className="text-3xl font-semibold tracking-tight">
+                ScholarAI
+              </h3>
+
+              <p className="mt-2 text-sm text-white/35">
+                AI-Powered Academic Platform
+              </p>
+            </div>
+
+            <span className="text-xl text-white/20 transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-white">
+              ↗
+            </span>
+          </div>
+
+          <p className="mt-7 max-w-xl leading-7 text-white/50">
+            An academic-focused application currently being developed while
+            exploring modern mobile development, TypeScript, and
+            AI-powered functionality.
+          </p>
+
+          <div className="mt-7 flex flex-wrap gap-2">
+            {[
+              "React Native",
+              "Expo",
+              "TypeScript",
+              "AI",
+            ].map((technology) => (
+              <span
+                key={technology}
+                className="rounded-full bg-white/5 px-3 py-1.5 text-xs text-white/40"
+              >
+                {technology}
+              </span>
+            ))}
+          </div>
+
+          <div className="mt-8 border-t border-white/[0.07] pt-6">
+            <span className="text-sm text-white/30">
+              More coming soon
+            </span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
         {/* Achievements */}
 <section
   id="achievements"
