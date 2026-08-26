@@ -475,15 +475,15 @@ export default function Home() {
       </div>
 
       <p className="max-w-md text-sm leading-6 text-white/40">
-        A selection of projects where I&apos;ve explored software,
-        computer vision, IoT, AI, and real-world problem solving.
+        A selection of projects spanning software, AI, computer vision,
+        IoT, and real-world problem solving.
       </p>
     </div>
 
-    {/* Project grid */}
+    {/* Featured projects */}
     <div className="mt-16 grid gap-6 md:grid-cols-2">
 
-      {/* ───────────────── DRIVE SAFE ───────────────── */}
+      {/* DriveSafe */}
       <article
         className="
           group relative overflow-hidden rounded-3xl
@@ -495,29 +495,34 @@ export default function Home() {
           hover:bg-white/[0.04]
         "
       >
-        {/* Background glow */}
+        {/* Ambient glow */}
         <div
           className="
             pointer-events-none absolute
-            -right-20 -top-20
-            h-56 w-56
+            -right-24 -top-24
+            h-64 w-64
             rounded-full
-            bg-blue-500/[0.08]
+            bg-blue-500/[0.06]
             blur-3xl
-            transition duration-500
-            group-hover:bg-blue-500/[0.13]
+            transition-all duration-500
+            group-hover:bg-blue-500/[0.12]
           "
         />
 
         <div className="relative p-8 sm:p-10">
 
-          <div className="flex items-start justify-between gap-4">
+          {/* Header */}
+          <div className="flex items-start justify-between gap-6">
             <div>
-              <p className="text-xs uppercase tracking-[0.2em] text-blue-300/50">
-                Computer Vision · IoT
-              </p>
+              <div className="flex items-center gap-2">
+                <span className="h-1.5 w-1.5 rounded-full bg-blue-400" />
 
-              <h3 className="mt-3 text-3xl font-semibold tracking-tight">
+                <p className="text-xs uppercase tracking-[0.2em] text-blue-300/50">
+                  Featured Project
+                </p>
+              </div>
+
+              <h3 className="mt-4 text-3xl font-semibold tracking-tight">
                 DriveSafe
               </h3>
             </div>
@@ -527,13 +532,14 @@ export default function Home() {
             </span>
           </div>
 
-          <p className="mt-6 max-w-xl leading-7 text-white/50">
+          {/* Description */}
+          <p className="mt-6 leading-7 text-white/50">
             An IoT-assisted driver safety system designed to detect
             drowsiness through camera-based eye analysis and respond
             through connected hardware.
           </p>
 
-          {/* Technologies */}
+          {/* Tech */}
           <div className="mt-8 flex flex-wrap gap-2">
             {[
               "Computer Vision",
@@ -546,9 +552,9 @@ export default function Home() {
                 className="
                   rounded-full
                   border border-white/10
-                  bg-white/[0.02]
+                  bg-black/20
                   px-3 py-1.5
-                  text-xs text-white/45
+                  text-xs text-white/50
                 "
               >
                 {technology}
@@ -556,38 +562,40 @@ export default function Home() {
             ))}
           </div>
 
-          {/* Links */}
-          <div className="mt-10 flex items-center gap-3">
-          <a
-  href="https://roaring-torte-d9b0a2.netlify.app/"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="
-    rounded-full
-    border border-white/15
-    bg-white/[0.04]
-    px-5 py-2.5
-    text-xs font-medium text-white/80
-    transition-all duration-300
-    hover:-translate-y-0.5
-    hover:border-white/30
-    hover:bg-white/[0.08]
-    hover:text-white
-  "
->
-  Live Project
-  <span className="ml-1.5 text-white/40">↗</span>
-</a>
+          {/* Footer */}
+          <div className="mt-10 flex flex-col gap-4 border-t border-white/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
 
-            <span className="text-xs text-white/20">
-              Project Showcase
+            <span className="text-xs text-white/25">
+              Computer Vision · IoT
             </span>
+
+            <a
+              href="https://roaring-torte-d9b0a2.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                inline-flex w-fit items-center
+                rounded-full
+                border border-blue-400/20
+                bg-blue-400/10
+                px-5 py-2.5
+                text-xs font-medium text-blue-200
+                transition-all duration-300
+                hover:-translate-y-0.5
+                hover:border-blue-400/40
+                hover:bg-blue-400/15
+                hover:text-blue-100
+              "
+            >
+              View project
+              <span className="ml-2">↗</span>
+            </a>
           </div>
         </div>
       </article>
 
 
-      {/* ───────────────── JOURNEASE ───────────────── */}
+      {/* Journease */}
       <article
         className="
           group relative overflow-hidden rounded-3xl
@@ -602,25 +610,30 @@ export default function Home() {
         <div
           className="
             pointer-events-none absolute
-            -right-20 -top-20
-            h-56 w-56
+            -right-24 -top-24
+            h-64 w-64
             rounded-full
-            bg-purple-500/[0.07]
+            bg-purple-500/[0.05]
             blur-3xl
-            transition duration-500
-            group-hover:bg-purple-500/[0.12]
+            transition-all duration-500
+            group-hover:bg-purple-500/[0.10]
           "
         />
 
         <div className="relative p-8 sm:p-10">
 
-          <div className="flex items-start justify-between gap-4">
+          {/* Header */}
+          <div className="flex items-start justify-between gap-6">
             <div>
-              <p className="text-xs uppercase tracking-[0.2em] text-purple-300/50">
-                Smart India Hackathon · 2025
-              </p>
+              <div className="flex items-center gap-2">
+                <span className="h-1.5 w-1.5 rounded-full bg-purple-400" />
 
-              <h3 className="mt-3 text-3xl font-semibold tracking-tight">
+                <p className="text-xs uppercase tracking-[0.2em] text-purple-300/50">
+                  Smart India Hackathon · 2025
+                </p>
+              </div>
+
+              <h3 className="mt-4 text-3xl font-semibold tracking-tight">
                 Journease
               </h3>
             </div>
@@ -630,12 +643,14 @@ export default function Home() {
             </span>
           </div>
 
-          <p className="mt-6 max-w-xl leading-7 text-white/50">
+          {/* Description */}
+          <p className="mt-6 leading-7 text-white/50">
             A smart travel companion designed to help users manage
             journeys, expenses, routes, analytics, and travel data
             with integrated AI functionality.
           </p>
 
+          {/* Tech */}
           <div className="mt-8 flex flex-wrap gap-2">
             {[
               "AI",
@@ -648,9 +663,9 @@ export default function Home() {
                 className="
                   rounded-full
                   border border-white/10
-                  bg-white/[0.02]
+                  bg-black/20
                   px-3 py-1.5
-                  text-xs text-white/45
+                  text-xs text-white/50
                 "
               >
                 {technology}
@@ -658,36 +673,40 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="mt-10 flex items-center gap-3">
-           <a
-  href="https://journeasesih.vercel.app/"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="
-    rounded-full
-    border border-white/15
-    bg-white/[0.04]
-    px-5 py-2.5
-    text-xs font-medium text-white/80
-    transition-all duration-300
-    hover:-translate-y-0.5
-    hover:border-white/30
-    hover:bg-white/[0.08]
-    hover:text-white
-  "
->
-  Live Project
-  <span className="ml-1.5 text-white/40">↗</span>
-</a>
-            <span className="text-xs text-white/20">
-              Smart India Hackathon
+          {/* Footer */}
+          <div className="mt-10 flex flex-col gap-4 border-t border-white/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
+
+            <span className="text-xs text-white/25">
+              Hackathon Project
             </span>
+
+            <a
+              href="https://journeasesih.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                inline-flex w-fit items-center
+                rounded-full
+                border border-purple-400/20
+                bg-purple-400/10
+                px-5 py-2.5
+                text-xs font-medium text-purple-200
+                transition-all duration-300
+                hover:-translate-y-0.5
+                hover:border-purple-400/40
+                hover:bg-purple-400/15
+                hover:text-purple-100
+              "
+            >
+              View project
+              <span className="ml-2">↗</span>
+            </a>
           </div>
         </div>
       </article>
 
 
-      {/* ───────────────── SAHAAY ───────────────── */}
+      {/* Sahaay */}
       <article
         className="
           group rounded-3xl
@@ -702,6 +721,7 @@ export default function Home() {
         "
       >
         <div className="flex items-start justify-between gap-4">
+
           <div>
             <p className="text-xs uppercase tracking-[0.2em] text-white/30">
               Design Thinking
@@ -743,15 +763,19 @@ export default function Home() {
           ))}
         </div>
 
-        <div className="mt-8">
+        <div className="mt-8 flex items-center justify-between border-t border-white/10 pt-6">
           <span className="text-xs uppercase tracking-[0.15em] text-white/20">
             Pratibhuti Exhibition
+          </span>
+
+          <span className="text-white/20 transition group-hover:translate-x-1 group-hover:text-white/50">
+            ↗
           </span>
         </div>
       </article>
 
 
-      {/* ───────────────── SCHOLAR AI ───────────────── */}
+      {/* ScholarAI */}
       <article
         className="
           group rounded-3xl
@@ -766,10 +790,15 @@ export default function Home() {
         "
       >
         <div className="flex items-start justify-between gap-4">
+
           <div>
-            <p className="text-xs uppercase tracking-[0.2em] text-white/30">
-              In Development
-            </p>
+            <div className="flex items-center gap-2">
+              <span className="h-1.5 w-1.5 rounded-full bg-yellow-400/70" />
+
+              <p className="text-xs uppercase tracking-[0.2em] text-white/30">
+                In Development
+              </p>
+            </div>
 
             <h3 className="mt-3 text-2xl font-semibold">
               ScholarAI
@@ -807,14 +836,25 @@ export default function Home() {
           ))}
         </div>
 
-        <div className="mt-8">
+        <div className="mt-8 flex items-center justify-between border-t border-white/10 pt-6">
           <span className="text-xs uppercase tracking-[0.15em] text-white/20">
             Currently building
+          </span>
+
+          <span className="text-white/20 transition group-hover:translate-x-1 group-hover:text-white/50">
+            ↗
           </span>
         </div>
       </article>
 
     </div>
+
+    {/* Bottom note */}
+    <div className="mt-10 flex items-center gap-3 text-xs text-white/20">
+      <span className="h-px w-8 bg-white/10" />
+      <span>More projects coming as I build.</span>
+    </div>
+
   </div>
 </section>
         {/* Achievements */}
@@ -837,8 +877,9 @@ export default function Home() {
         </h2>
 
         <p className="mt-6 max-w-xs text-sm leading-7 text-white/35">
-          A collection of competitions, exhibitions, and leadership
-          experiences that have shaped how I build and solve problems.
+          Competitions, exhibitions, and leadership experiences that
+          have shaped how I approach technology, teamwork, and
+          problem solving.
         </p>
 
         <div className="mt-10 hidden items-center gap-3 md:flex">
@@ -853,108 +894,113 @@ export default function Home() {
       {/* Right */}
       <div className="space-y-4">
 
-        {/* SIH */}
+        {/* ================= SIH ================= */}
         <article
           className="
             group relative overflow-hidden
-            rounded-[28px]
-            border border-white/10
-            bg-white/[0.025]
-            p-7
+            rounded-[30px]
+            border border-blue-400/10
+            bg-gradient-to-br from-blue-500/[0.06] to-white/[0.02]
+            p-8
             transition-all duration-500
-            hover:border-white/20
-            hover:bg-white/[0.04]
-            sm:p-9
+            hover:-translate-y-1
+            hover:border-blue-400/20
+            sm:p-10
           "
         >
-          {/* Glow */}
+
+          {/* Ambient glow */}
           <div
             className="
               pointer-events-none absolute
-              -right-20 -top-20
-              h-56 w-56
+              -right-32 -top-32
+              h-80 w-80
               rounded-full
-              bg-blue-500/[0.05]
-              blur-3xl
-              transition duration-500
-              group-hover:bg-blue-500/[0.09]
+              bg-blue-500/[0.07]
+              blur-[100px]
+              transition duration-700
+              group-hover:bg-blue-500/[0.12]
             "
-            aria-hidden="true"
           />
 
-          <div className="relative flex flex-col gap-8 sm:flex-row sm:justify-between">
+          <div className="relative">
 
-            <div className="max-w-2xl">
-
+            {/* Top metadata */}
+            <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <span className="font-mono text-[10px] text-blue-300/60">
-                  01
-                </span>
+                <span className="flex h-2 w-2 rounded-full bg-blue-400 shadow-[0_0_12px_rgba(96,165,250,0.7)]" />
 
-                <span className="h-px w-6 bg-white/10" />
-
-                <p className="text-xs uppercase tracking-[0.2em] text-white/30">
+                <p className="text-xs uppercase tracking-[0.2em] text-blue-300/60">
                   Smart India Hackathon · 2025
                 </p>
               </div>
 
-              <h3 className="mt-5 text-2xl font-semibold tracking-tight sm:text-3xl">
-                Top 100
-                <span className="text-white/40">
-                  {" "}— Software Category
-                </span>
-              </h3>
-
-              <p className="mt-4 leading-7 text-white/45">
-                Selected among the top 100 teams from 900+ teams at the
-                university with <span className="text-white/70">Journease</span>,
-                a smart travel companion focused on travel management,
-                analytics, and AI-powered functionality.
-              </p>
-
-              <div className="mt-7 flex flex-wrap gap-2">
-                {["Smart India Hackathon", "Top 100", "Journease", "AI"].map(
-                  (item) => (
-                    <span
-                      key={item}
-                      className="
-                        rounded-full
-                        border border-white/[0.07]
-                        bg-white/[0.025]
-                        px-3 py-1.5
-                        text-xs text-white/45
-                      "
-                    >
-                      {item}
-                    </span>
-                  )
-                )}
-              </div>
+              <span className="font-mono text-[10px] text-white/20">
+                01
+              </span>
             </div>
 
-            <div className="shrink-0">
-              <span
-                className="
-                  inline-flex h-16 w-16
-                  items-center justify-center
-                  rounded-2xl
-                  border border-white/10
-                  bg-white/[0.03]
-                  font-mono text-sm
-                  text-white/40
-                  transition
-                  group-hover:border-blue-400/20
-                  group-hover:text-blue-300/70
-                "
-              >
-                01
+            {/* Main achievement */}
+            <div className="mt-10">
+              <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-white/25">
+                SOFTWARE CATEGORY
+              </p>
+
+              <h3 className="mt-3 text-5xl font-semibold tracking-[-0.04em] sm:text-6xl">
+                Top 100
+              </h3>
+
+              <p className="mt-2 text-lg text-white/35">
+                among 900+ university teams
+              </p>
+            </div>
+
+            <p className="mt-7 max-w-2xl leading-7 text-white/45">
+              Selected among the top 100 teams with{" "}
+              <span className="text-white/75">Journease</span>,
+              a smart travel companion focused on travel management,
+              analytics, and AI-powered functionality.
+            </p>
+
+            {/* Tags */}
+            <div className="mt-8 flex flex-wrap gap-2">
+              {[
+                "Smart India Hackathon",
+                "Top 100",
+                "Journease",
+                "AI",
+              ].map((item) => (
+                <span
+                  key={item}
+                  className="
+                    rounded-full
+                    border border-white/[0.08]
+                    bg-black/20
+                    px-3 py-1.5
+                    text-xs text-white/45
+                  "
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
+
+            {/* Bottom */}
+            <div className="mt-10 flex items-center justify-between border-t border-white/10 pt-6">
+              <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-white/20">
+                HACKATHON · 2025
+              </span>
+
+              <span className="text-white/20 transition-all duration-300 group-hover:translate-x-1 group-hover:text-blue-300/70">
+                ↗
               </span>
             </div>
 
           </div>
         </article>
 
-        {/* Exhibition */}
+
+        {/* ================= SAHAAY ================= */}
         <article
           className="
             group rounded-[28px]
@@ -962,14 +1008,16 @@ export default function Home() {
             bg-white/[0.015]
             p-7
             transition-all duration-300
+            hover:-translate-y-0.5
             hover:border-white/20
             hover:bg-white/[0.03]
             sm:p-8
           "
         >
-          <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
+          <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
 
-            <div>
+            <div className="max-w-2xl">
+
               <div className="flex items-center gap-3">
                 <span className="font-mono text-[10px] text-white/25">
                   02
@@ -986,21 +1034,36 @@ export default function Home() {
                 Sahaay
               </h3>
 
-              <p className="mt-3 max-w-2xl leading-7 text-white/40">
-                Selected for exhibition with Sahaay, a women&apos;s safety
-                application developed through Design Thinking and focused
-                on real-world transportation scenarios.
+              <p className="mt-3 leading-7 text-white/40">
+                Selected for exhibition with Sahaay, a women&apos;s
+                safety application developed through Design Thinking
+                and focused on real-world transportation scenarios.
               </p>
+
             </div>
 
-            <span className="font-mono text-xs text-white/20 transition group-hover:text-white/40">
-              EXHIBITED
+            <span
+              className="
+                shrink-0 rounded-full
+                border border-white/10
+                bg-white/[0.025]
+                px-3 py-1.5
+                font-mono text-[9px]
+                uppercase tracking-[0.15em]
+                text-white/25
+                transition
+                group-hover:border-white/20
+                group-hover:text-white/50
+              "
+            >
+              Exhibited
             </span>
 
           </div>
         </article>
 
-        {/* DriveSafe */}
+
+        {/* ================= DRIVESAFE ================= */}
         <article
           className="
             group rounded-[28px]
@@ -1008,14 +1071,16 @@ export default function Home() {
             bg-white/[0.015]
             p-7
             transition-all duration-300
+            hover:-translate-y-0.5
             hover:border-white/20
             hover:bg-white/[0.03]
             sm:p-8
           "
         >
-          <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
+          <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
 
-            <div>
+            <div className="max-w-2xl">
+
               <div className="flex items-center gap-3">
                 <span className="font-mono text-[10px] text-white/25">
                   03
@@ -1032,21 +1097,36 @@ export default function Home() {
                 DriveSafe
               </h3>
 
-              <p className="mt-3 max-w-2xl leading-7 text-white/40">
+              <p className="mt-3 leading-7 text-white/40">
                 Selected for exhibition with DriveSafe, an IoT and
-                computer-vision based driver safety project designed to
-                detect drowsiness through camera-based analysis.
+                computer-vision based driver safety project designed
+                to detect drowsiness through camera-based analysis.
               </p>
+
             </div>
 
-            <span className="font-mono text-xs text-white/20 transition group-hover:text-white/40">
-              EXHIBITED
+            <span
+              className="
+                shrink-0 rounded-full
+                border border-white/10
+                bg-white/[0.025]
+                px-3 py-1.5
+                font-mono text-[9px]
+                uppercase tracking-[0.15em]
+                text-white/25
+                transition
+                group-hover:border-white/20
+                group-hover:text-white/50
+              "
+            >
+              Exhibited
             </span>
 
           </div>
         </article>
 
-        {/* Leadership */}
+
+        {/* ================= LEADERSHIP ================= */}
         <article
           className="
             group rounded-[28px]
@@ -1054,14 +1134,16 @@ export default function Home() {
             bg-white/[0.015]
             p-7
             transition-all duration-300
+            hover:-translate-y-0.5
             hover:border-white/20
             hover:bg-white/[0.03]
             sm:p-8
           "
         >
-          <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
+          <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
 
-            <div>
+            <div className="max-w-2xl">
+
               <div className="flex items-center gap-3">
                 <span className="font-mono text-[10px] text-white/25">
                   04
@@ -1078,15 +1160,30 @@ export default function Home() {
                 Technical &amp; Project Leadership
               </h3>
 
-              <p className="mt-3 max-w-2xl leading-7 text-white/40">
-                Taking technical and project leadership responsibilities
-                across IEEE Web Development, PBL, Entrepreneurship, and
-                Smart India Hackathon activities.
+              <p className="mt-3 leading-7 text-white/40">
+                Leading teams across IEEE Web Development, PBL,
+                Entrepreneurship, and Smart India Hackathon 2026,
+                while working across technical and project-focused
+                initiatives.
               </p>
+
             </div>
 
-            <span className="font-mono text-xs text-white/20 transition group-hover:text-white/40">
-              LEAD
+            <span
+              className="
+                shrink-0 rounded-full
+                border border-white/10
+                bg-white/[0.025]
+                px-3 py-1.5
+                font-mono text-[9px]
+                uppercase tracking-[0.15em]
+                text-white/25
+                transition
+                group-hover:border-white/20
+                group-hover:text-white/50
+              "
+            >
+              Lead
             </span>
 
           </div>
@@ -1410,121 +1507,629 @@ export default function Home() {
   className="border-t border-white/10 px-6 py-32"
 >
   <div className="mx-auto max-w-6xl">
-    <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
-      <div>
+
+    {/* Section header */}
+    <div className="grid gap-12 md:grid-cols-[0.8fr_2fr]">
+
+      {/* Left */}
+      <div className="md:sticky md:top-32 md:self-start">
         <p className="text-sm uppercase tracking-[0.25em] text-white/30">
-          Learning
+          Certifications
         </p>
 
         <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
           Always learning.
         </h2>
+
+        <p className="mt-6 max-w-xs text-sm leading-7 text-white/35">
+          A collection of courses and certifications that reflect the
+          technologies and concepts I&apos;ve been exploring.
+        </p>
+
+        <div className="mt-10 hidden items-center gap-3 md:flex">
+          <span className="h-px w-10 bg-white/20" />
+
+          <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-white/20">
+            CONTINUOUS LEARNING
+          </span>
+        </div>
       </div>
 
-      <p className="max-w-md text-sm leading-6 text-white/40">
-        Building fundamentals today while expanding toward backend,
-        cloud, and DevOps.
-      </p>
-    </div>
+      {/* Right */}
+      <div>
 
-    <div className="mt-16 grid gap-px overflow-hidden rounded-3xl border border-white/10 bg-white/10 sm:grid-cols-2">
-      {[
-        {
-          name: "Advanced C++ Training",
-          issuer: "Spoken Tutorial · IIT Bombay",
-          date: "2026",
-        },
-        {
-          name: "Generative AI Mastermind",
-          issuer: "Outskill",
-          date: "2026",
-        },
-        {
-          name: "Introduction to Prompt Engineering for Generative AI",
-          issuer: "LinkedIn Learning",
-          date: "2026",
-        },
-        {
-          name: "What Is Generative AI?",
-          issuer: "LinkedIn Learning",
-          date: "2026",
-        },
-        {
-          name: "Ethics in the Age of Generative AI",
-          issuer: "LinkedIn Learning",
-          date: "2025",
-        },
-        {
-          name: "C Training",
-          issuer: "Spoken Tutorial · IIT Bombay",
-          date: "2025",
-        },
-      ].map((certification) => (
-        <article
-          key={certification.name}
-          className="bg-black p-6 transition hover:bg-white/[0.03]"
-        >
-          <div className="flex justify-between gap-4">
-            <div>
-              <h3 className="font-medium">
-                {certification.name}
+        {/* Learning status */}
+        <div className="mb-8 flex items-center gap-3">
+          <span className="relative flex h-2 w-2">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-40" />
+            <span className="relative inline-flex h-2 w-2 rounded-full bg-green-400" />
+          </span>
+
+          <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-white/30">
+            Currently expanding my stack
+          </span>
+        </div>
+
+        {/* Certification cards */}
+        <div className="grid gap-3 sm:grid-cols-2">
+
+          {/* Advanced C++ */}
+          <article
+            className="
+              group relative overflow-hidden
+              rounded-[24px]
+              border border-white/10
+              bg-white/[0.025]
+              p-6
+              transition-all duration-300
+              hover:-translate-y-1
+              hover:border-white/20
+              hover:bg-white/[0.04]
+            "
+          >
+            <div
+              className="
+                absolute -right-16 -top-16
+                h-40 w-40
+                rounded-full
+                bg-blue-500/[0.06]
+                blur-3xl
+                transition
+                group-hover:bg-blue-500/[0.1]
+              "
+            />
+
+            <div className="relative">
+              <div className="flex items-center justify-between">
+                <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-blue-300/60">
+                  C++
+                </span>
+
+                <span className="font-mono text-[9px] text-white/20">
+                  2026
+                </span>
+              </div>
+
+              <h3 className="mt-5 text-lg font-medium leading-6">
+                Advanced C++ Training
               </h3>
 
-              <p className="mt-2 text-sm text-white/40">
-                {certification.issuer}
+              <p className="mt-3 text-sm text-white/40">
+                Spoken Tutorial · IIT Bombay
               </p>
-            </div>
 
-            <span className="shrink-0 text-xs text-white/30">
-              {certification.date}
-            </span>
+              <div className="mt-6 flex items-center gap-2">
+                <span className="h-px w-6 bg-white/10" />
+
+                <span className="font-mono text-[8px] uppercase tracking-[0.18em] text-white/20">
+                  CERTIFIED
+                </span>
+              </div>
+            </div>
+          </article>
+
+          {/* Generative AI Mastermind */}
+          <article
+            className="
+              group relative overflow-hidden
+              rounded-[24px]
+              border border-white/10
+              bg-white/[0.025]
+              p-6
+              transition-all duration-300
+              hover:-translate-y-1
+              hover:border-white/20
+              hover:bg-white/[0.04]
+            "
+          >
+            <div
+              className="
+                absolute -right-16 -top-16
+                h-40 w-40
+                rounded-full
+                bg-purple-500/[0.05]
+                blur-3xl
+                transition
+                group-hover:bg-purple-500/[0.09]
+              "
+            />
+
+            <div className="relative">
+              <div className="flex items-center justify-between">
+                <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-purple-300/60">
+                  AI
+                </span>
+
+                <span className="font-mono text-[9px] text-white/20">
+                  2026
+                </span>
+              </div>
+
+              <h3 className="mt-5 text-lg font-medium leading-6">
+                Generative AI Mastermind
+              </h3>
+
+              <p className="mt-3 text-sm text-white/40">
+                Outskill
+              </p>
+
+              <div className="mt-6 flex items-center gap-2">
+                <span className="h-px w-6 bg-white/10" />
+
+                <span className="font-mono text-[8px] uppercase tracking-[0.18em] text-white/20">
+                  CERTIFIED
+                </span>
+              </div>
+            </div>
+          </article>
+
+          {/* Prompt Engineering */}
+          <article
+            className="
+              group relative overflow-hidden
+              rounded-[24px]
+              border border-white/10
+              bg-white/[0.025]
+              p-6
+              transition-all duration-300
+              hover:-translate-y-1
+              hover:border-white/20
+              hover:bg-white/[0.04]
+            "
+          >
+            <div
+              className="
+                absolute -right-16 -top-16
+                h-40 w-40
+                rounded-full
+                bg-blue-500/[0.04]
+                blur-3xl
+                transition
+                group-hover:bg-blue-500/[0.08]
+              "
+            />
+
+            <div className="relative">
+              <div className="flex items-center justify-between">
+                <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-blue-300/50">
+                  AI / LLM
+                </span>
+
+                <span className="font-mono text-[9px] text-white/20">
+                  2026
+                </span>
+              </div>
+
+              <h3 className="mt-5 text-lg font-medium leading-6">
+                Introduction to Prompt Engineering for Generative AI
+              </h3>
+
+              <p className="mt-3 text-sm text-white/40">
+                LinkedIn Learning
+              </p>
+
+              <div className="mt-6 flex items-center gap-2">
+                <span className="h-px w-6 bg-white/10" />
+
+                <span className="font-mono text-[8px] uppercase tracking-[0.18em] text-white/20">
+                  CERTIFIED
+                </span>
+              </div>
+            </div>
+          </article>
+
+          {/* What Is Generative AI */}
+          <article
+            className="
+              group relative overflow-hidden
+              rounded-[24px]
+              border border-white/10
+              bg-white/[0.025]
+              p-6
+              transition-all duration-300
+              hover:-translate-y-1
+              hover:border-white/20
+              hover:bg-white/[0.04]
+            "
+          >
+            <div
+              className="
+                absolute -right-16 -top-16
+                h-40 w-40
+                rounded-full
+                bg-purple-500/[0.04]
+                blur-3xl
+                transition
+                group-hover:bg-purple-500/[0.08]
+              "
+            />
+
+            <div className="relative">
+              <div className="flex items-center justify-between">
+                <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-purple-300/50">
+                  AI
+                </span>
+
+                <span className="font-mono text-[9px] text-white/20">
+                  2026
+                </span>
+              </div>
+
+              <h3 className="mt-5 text-lg font-medium leading-6">
+                What Is Generative AI?
+              </h3>
+
+              <p className="mt-3 text-sm text-white/40">
+                LinkedIn Learning
+              </p>
+
+              <div className="mt-6 flex items-center gap-2">
+                <span className="h-px w-6 bg-white/10" />
+
+                <span className="font-mono text-[8px] uppercase tracking-[0.18em] text-white/20">
+                  CERTIFIED
+                </span>
+              </div>
+            </div>
+          </article>
+
+          {/* Ethics */}
+          <article
+            className="
+              group relative overflow-hidden
+              rounded-[24px]
+              border border-white/10
+              bg-white/[0.025]
+              p-6
+              transition-all duration-300
+              hover:-translate-y-1
+              hover:border-white/20
+              hover:bg-white/[0.04]
+            "
+          >
+            <div
+              className="
+                absolute -right-16 -top-16
+                h-40 w-40
+                rounded-full
+                bg-amber-500/[0.04]
+                blur-3xl
+                transition
+                group-hover:bg-amber-500/[0.08]
+              "
+            />
+
+            <div className="relative">
+              <div className="flex items-center justify-between">
+                <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-amber-300/50">
+                  ETHICS
+                </span>
+
+                <span className="font-mono text-[9px] text-white/20">
+                  2025
+                </span>
+              </div>
+
+              <h3 className="mt-5 text-lg font-medium leading-6">
+                Ethics in the Age of Generative AI
+              </h3>
+
+              <p className="mt-3 text-sm text-white/40">
+                LinkedIn Learning
+              </p>
+
+              <div className="mt-6 flex items-center gap-2">
+                <span className="h-px w-6 bg-white/10" />
+
+                <span className="font-mono text-[8px] uppercase tracking-[0.18em] text-white/20">
+                  CERTIFIED
+                </span>
+              </div>
+            </div>
+          </article>
+
+          {/* C Training */}
+          <article
+            className="
+              group relative overflow-hidden
+              rounded-[24px]
+              border border-white/10
+              bg-white/[0.025]
+              p-6
+              transition-all duration-300
+              hover:-translate-y-1
+              hover:border-white/20
+              hover:bg-white/[0.04]
+            "
+          >
+            <div
+              className="
+                absolute -right-16 -top-16
+                h-40 w-40
+                rounded-full
+                bg-green-500/[0.04]
+                blur-3xl
+                transition
+                group-hover:bg-green-500/[0.08]
+              "
+            />
+
+            <div className="relative">
+              <div className="flex items-center justify-between">
+                <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-green-300/50">
+                  C
+                </span>
+
+                <span className="font-mono text-[9px] text-white/20">
+                  2025
+                </span>
+              </div>
+
+              <h3 className="mt-5 text-lg font-medium leading-6">
+                C Training
+              </h3>
+
+              <p className="mt-3 text-sm text-white/40">
+                Spoken Tutorial · IIT Bombay
+              </p>
+
+              <div className="mt-6 flex items-center gap-2">
+                <span className="h-px w-6 bg-white/10" />
+
+                <span className="font-mono text-[8px] uppercase tracking-[0.18em] text-white/20">
+                  CERTIFIED
+                </span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        {/* Bottom learning statement */}
+        <div className="mt-6 rounded-[24px] border border-dashed border-white/[0.08] px-6 py-5">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <p className="text-sm text-white/35">
+              Learning doesn&apos;t stop at certificates.
+            </p>
+
+            <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-white/20">
+              BUILD → LEARN → BUILD AGAIN
+            </p>
           </div>
-        </article>
-      ))}
+        </div>
+
+      </div>
     </div>
   </div>
 </section>{/* Contact */}
 <section
   id="contact"
-  className="border-t border-white/10 px-6 py-32"
+  className="relative overflow-hidden border-t border-white/10 px-6 py-32"
 >
-  <div className="mx-auto max-w-6xl">
-    <div className="max-w-3xl">
-      <p className="text-sm uppercase tracking-[0.25em] text-white/30">
-        Contact
-      </p>
+  {/* Background atmosphere */}
+  <div
+    className="
+      pointer-events-none absolute
+      left-1/2 top-1/2
+      h-[500px] w-[500px]
+      -translate-x-1/2 -translate-y-1/2
+      rounded-full
+      bg-blue-500/[0.035]
+      blur-[120px]
+    "
+    aria-hidden="true"
+  />
 
-      <h2 className="mt-4 text-4xl font-semibold tracking-tight sm:text-6xl">
-        Let&apos;s build something.
-      </h2>
+  <div className="relative mx-auto max-w-6xl">
 
-      <p className="mt-6 max-w-xl text-lg leading-8 text-white/40">
-        Have an idea, opportunity, collaboration, or just want to talk
-        about technology? I&apos;d be happy to hear from you.
-      </p>
+    {/* Header */}
+    <div className="grid gap-12 md:grid-cols-[0.8fr_2fr]">
 
-      <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-        <a
-          href="mailto:omkailashmore@gmail.com"
-          className="rounded-full bg-white px-6 py-3 text-center text-sm font-medium text-black transition hover:bg-white/90"
-        >
-          Email me ↗
-        </a>
+      {/* Left */}
+      <div>
+        <p className="text-sm uppercase tracking-[0.25em] text-white/30">
+          Contact
+        </p>
 
-        <a
-          href="tel:+919172460997"
-          className="rounded-full border border-white/15 px-6 py-3 text-center text-sm text-white transition hover:border-white/30 hover:bg-white/5"
-        >
-          Call me ↗
-        </a>
+        <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
+          Let&apos;s build something.
+        </h2>
+
+        <p className="mt-6 max-w-xs text-sm leading-7 text-white/35">
+          Have an idea, opportunity, collaboration, or just want to talk
+          about technology? My inbox is open.
+        </p>
       </div>
 
-      <div className="mt-12 flex flex-wrap gap-6 text-sm">
+      {/* Right */}
+      <div>
+
+        {/* Main CTA */}
+        <div
+          className="
+            group relative overflow-hidden
+            rounded-[28px]
+            border border-white/10
+            bg-white/[0.025]
+            p-8
+            transition-all duration-500
+            hover:border-white/20
+            hover:bg-white/[0.04]
+            sm:p-10
+          "
+        >
+          {/* Decorative glow */}
+          <div
+            className="
+              pointer-events-none absolute
+              -right-24 -top-24
+              h-64 w-64
+              rounded-full
+              bg-blue-500/[0.06]
+              blur-3xl
+              transition duration-500
+              group-hover:bg-blue-500/[0.1]
+            "
+            aria-hidden="true"
+          />
+
+          <div className="relative">
+
+            {/* Status */}
+            <div className="flex items-center gap-3">
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-40" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-green-400" />
+              </span>
+
+              <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-white/30">
+                Open to opportunities
+              </span>
+            </div>
+
+            <h3 className="mt-6 max-w-2xl text-3xl font-semibold tracking-tight sm:text-4xl">
+              Have something in mind?
+              <br />
+              <span className="text-white/35">
+                Let&apos;s talk.
+              </span>
+            </h3>
+
+            <p className="mt-5 max-w-xl leading-7 text-white/40">
+              I&apos;m always interested in interesting projects,
+              collaborations, technical opportunities, and ideas worth
+              building.
+            </p>
+
+            {/* Buttons */}
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+
+             <a
+  href="mailto:omkailashmore@gmail.com"
+  className="
+    group/button
+    inline-flex items-center justify-center
+    rounded-full
+    border border-white/15
+    bg-white/[0.06]
+    px-6 py-3
+    text-sm font-medium
+    text-white
+    transition-all duration-300
+    hover:-translate-y-0.5
+    hover:border-blue-400/30
+    hover:bg-blue-400/[0.08]
+  "
+>
+                Send me an email
+
+                <span className="ml-2 transition-transform duration-300 group-hover/button:-translate-y-0.5 group-hover/button:translate-x-0.5">
+                  ↗
+                </span>
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/om-more-72ab85374/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                  inline-flex items-center justify-center
+                  rounded-full
+                  border border-white/10
+                  bg-white/[0.03]
+                  px-6 py-3
+                  text-sm font-medium
+                  text-white/70
+                  transition-all duration-300
+                  hover:-translate-y-0.5
+                  hover:border-white/20
+                  hover:bg-white/[0.06]
+                  hover:text-white
+                "
+              >
+                LinkedIn
+                <span className="ml-2 text-white/30">↗</span>
+              </a>
+
+            </div>
+          </div>
+        </div>
+
+        {/* Contact details */}
+        <div className="mt-4 grid gap-4 sm:grid-cols-2">
+
+          {/* Email */}
+          <a
+            href="mailto:omkailashmore@gmail.com"
+            className="
+              group rounded-2xl
+              border border-white/[0.08]
+              bg-white/[0.015]
+              p-5
+              transition-all duration-300
+              hover:border-white/15
+              hover:bg-white/[0.03]
+            "
+          >
+            <div className="flex items-center justify-between">
+              <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-white/25">
+                EMAIL
+              </span>
+
+              <span className="text-white/20 transition group-hover:text-white/60">
+                ↗
+              </span>
+            </div>
+
+            <p className="mt-4 text-sm text-white/55">
+              omkailashmore@gmail.com
+            </p>
+          </a>
+
+          {/* GitHub */}
+          <a
+            href="https://github.com/omkailasmore"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="
+              group rounded-2xl
+              border border-white/[0.08]
+              bg-white/[0.015]
+              p-5
+              transition-all duration-300
+              hover:border-white/15
+              hover:bg-white/[0.03]
+            "
+          >
+            <div className="flex items-center justify-between">
+              <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-white/25">
+                GITHUB
+              </span>
+
+              <span className="text-white/20 transition group-hover:text-white/60">
+                ↗
+              </span>
+            </div>
+
+            <p className="mt-4 text-sm text-white/55">
+              github.com/omkailasmore
+            </p>
+          </a>
+
+        </div>
+
+      </div>
+    </div>
+
+    {/* Bottom social links */}
+    <div className="mt-20 flex flex-col justify-between gap-6 border-t border-white/[0.08] pt-6 sm:flex-row sm:items-center">
+
+      <div className="flex flex-wrap gap-6">
         <a
           href="https://github.com/omkailasmore"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-white/40 transition hover:text-white"
+          className="text-sm text-white/30 transition hover:text-white"
         >
           GitHub ↗
         </a>
@@ -1533,12 +2138,25 @@ export default function Home() {
           href="https://www.linkedin.com/in/om-more-72ab85374/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-white/40 transition hover:text-white"
+          className="text-sm text-white/30 transition hover:text-white"
         >
           LinkedIn ↗
         </a>
+
+        <a
+          href="mailto:omkailashmore@gmail.com"
+          className="text-sm text-white/30 transition hover:text-white"
+        >
+          Email ↗
+        </a>
       </div>
+
+      <p className="font-mono text-[9px] uppercase tracking-[0.18em] text-white/20">
+        BUILD SOMETHING WORTH SHIPPING
+      </p>
+
     </div>
+
   </div>
 </section>{/* Footer */}
 <footer className="border-t border-white/10 px-6 py-8">

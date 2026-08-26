@@ -3,12 +3,12 @@
 import { useEffect, useState } from "react";
 
 const navItems = [
-  { name: "Home", href: "#home" },
   { name: "About", href: "#about" },
   { name: "Experience", href: "#experience" },
   { name: "Projects", href: "#projects" },
   { name: "Achievements", href: "#achievements" },
   { name: "Skills", href: "#skills" },
+  { name: "Certifications", href: "#certifications" },
 ];
 
 export default function Navbar() {
