@@ -220,80 +220,248 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Experience */}
-        <section
-          id="experience"
-          className="border-t border-white/10 px-6 py-32"
-        >
-          <div className="mx-auto max-w-6xl">
-            <div className="grid gap-12 md:grid-cols-[1fr_2fr]">
+       {/* Experience */}
+<section
+  id="experience"
+  className="border-t border-white/10 px-6 py-32"
+>
+  <div className="mx-auto max-w-6xl">
+
+    {/* Section heading */}
+    <div className="grid gap-12 md:grid-cols-[0.8fr_2fr]">
+
+      {/* Left */}
+      <div className="md:sticky md:top-32 md:self-start">
+        <p className="text-sm uppercase tracking-[0.25em] text-white/30">
+          Experience
+        </p>
+
+        <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
+          Where I&apos;m building.
+        </h2>
+
+        <p className="mt-6 max-w-xs text-sm leading-7 text-white/35">
+          Learning by taking responsibility, working with teams, and
+          turning technical ideas into things people can actually use.
+        </p>
+
+        <div className="mt-10 hidden items-center gap-3 md:flex">
+          <span className="h-px w-10 bg-white/20" />
+
+          <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-white/20">
+            01 / PRESENT
+          </span>
+        </div>
+      </div>
+
+      {/* Right */}
+      <div className="relative">
+
+        {/* Timeline line */}
+        <div
+          className="
+            absolute left-[11px] top-3 hidden h-[calc(100%-24px)]
+            w-px bg-gradient-to-b
+            from-blue-400/40
+            via-white/10
+            to-transparent
+            sm:block
+          "
+          aria-hidden="true"
+        />
+
+        {/* Experience item */}
+        <article className="group relative sm:pl-14">
+
+          {/* Timeline node */}
+          <div
+            className="
+              absolute left-[5px] top-3 hidden
+              h-3.5 w-3.5 rounded-full
+              border border-blue-400/40
+              bg-[#05070d]
+              shadow-[0_0_20px_rgba(96,165,250,0.18)]
+              sm:block
+            "
+          >
+            <span className="absolute inset-1 rounded-full bg-blue-400/70" />
+          </div>
+
+          {/* Card */}
+          <div
+            className="
+              relative overflow-hidden rounded-[28px]
+              border border-white/10
+              bg-white/[0.02]
+              p-7
+              transition-all duration-500
+              hover:border-white/20
+              hover:bg-white/[0.035]
+              sm:p-9
+            "
+          >
+
+            {/* Subtle glow */}
+            <div
+              className="
+                pointer-events-none absolute
+                -right-24 -top-24
+                h-56 w-56
+                rounded-full
+                bg-blue-500/[0.045]
+                blur-3xl
+                transition duration-500
+                group-hover:bg-blue-500/[0.08]
+              "
+              aria-hidden="true"
+            />
+
+            {/* Top metadata */}
+            <div className="relative flex flex-col justify-between gap-5 sm:flex-row sm:items-start">
+
               <div>
-                <p className="text-sm uppercase tracking-[0.25em] text-white/30">
-                  Experience
-                </p>
+                <div className="flex items-center gap-3">
 
-                <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
-                  Where I&apos;m building.
-                </h2>
-              </div>
+                  <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-white/25">
+                    01
+                  </span>
 
-              <article className="rounded-3xl border border-white/10 bg-white/[0.02] p-8 sm:p-10">
-                <div className="flex flex-col justify-between gap-4 sm:flex-row">
-                  <div>
-                    <p className="text-sm text-white/40">
-                      2026 — Present
-                    </p>
+                  <span className="h-px w-6 bg-white/10" />
 
-                    <h3 className="mt-2 text-2xl font-semibold">
-                      Web Development Technical Lead
-                    </h3>
-
-                    <p className="mt-1 text-white/50">
-                      MIT-ADT IEEE Student Branch
-                    </p>
-                  </div>
-
-                  <span className="h-fit w-fit rounded-full border border-white/10 px-3 py-1 text-xs text-white/40">
-                    Leadership
+                  <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-white/30">
+                    2026 — Present
                   </span>
                 </div>
 
-                <div className="mt-8">
-                  <p className="leading-8 text-white/50">
-                    Leading the web development technical team at the MIT-ADT
-                    IEEE Student Branch, working with the team to build
-                    technical skills and contribute to web development
-                    initiatives.
+                <h3 className="mt-5 text-2xl font-semibold tracking-tight sm:text-3xl">
+                  Web Development
+                  <br className="hidden sm:block" />
+                  <span className="text-white/40">
+                    Technical Lead
+                  </span>
+                </h3>
+
+                <p className="mt-3 text-sm text-white/50">
+                  MIT-ADT IEEE Student Branch
+                </p>
+              </div>
+
+              {/* Current role */}
+              <div
+                className="
+                  flex w-fit items-center gap-2
+                  rounded-full
+                  border border-green-400/10
+                  bg-green-400/[0.035]
+                  px-3 py-1.5
+                "
+              >
+                <span className="relative flex h-1.5 w-1.5">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-40" />
+                  <span className="relative h-1.5 w-1.5 rounded-full bg-green-400" />
+                </span>
+
+                <span className="font-mono text-[9px] uppercase tracking-[0.16em] text-green-400/70">
+                  Current Role
+                </span>
+              </div>
+            </div>
+
+            {/* Divider */}
+            <div className="relative my-8 h-px bg-white/[0.07]" />
+
+            {/* Description */}
+            <div className="relative max-w-2xl">
+              <p className="text-base leading-8 text-white/50">
+                Leading the web development technical team at the MIT-ADT
+                IEEE Student Branch, helping team members build practical
+                development skills while contributing to web development
+                initiatives.
+              </p>
+
+              <p className="mt-5 text-sm leading-7 text-white/30">
+                My role combines technical learning, collaboration, project
+                development, and leadership — with a focus on creating a
+                stronger development culture within the team.
+              </p>
+            </div>
+
+            {/* Skills */}
+            <div className="relative mt-8 flex flex-wrap gap-2">
+              {[
+                "Web Development",
+                "React",
+                "Next.js",
+                "TypeScript",
+                "Git",
+              ].map((skill) => (
+                <span
+                  key={skill}
+                  className="
+                    rounded-full
+                    border border-white/[0.07]
+                    bg-white/[0.025]
+                    px-3 py-1.5
+                    text-xs text-white/45
+                    transition-colors duration-300
+                    group-hover:border-white/10
+                    group-hover:text-white/60
+                  "
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+
+            {/* Bottom metadata */}
+            <div
+              className="
+                relative mt-9 flex flex-col
+                gap-4 border-t border-white/[0.07]
+                pt-5 sm:flex-row sm:items-center
+                sm:justify-between
+              "
+            >
+              <div className="flex items-center gap-5">
+                <div>
+                  <p className="font-mono text-[9px] uppercase tracking-[0.15em] text-white/20">
+                    Focus
                   </p>
 
-                  <div className="mt-8 flex flex-wrap gap-2">
-                    {[
-                      "Web Development",
-                      "React",
-                      "Next.js",
-                      "TypeScript",
-                      "Git",
-                    ].map((skill) => (
-                      <span
-                        key={skill}
-                        className="rounded-full bg-white/5 px-3 py-1.5 text-xs text-white/50"
-                      >
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
+                  <p className="mt-1 text-xs text-white/45">
+                    Web & Leadership
+                  </p>
                 </div>
-              </article>
-            </div>
-          </div>
-        </section>
 
-        {/* Projects */}
+                <div>
+                  <p className="font-mono text-[9px] uppercase tracking-[0.15em] text-white/20">
+                    Organization
+                  </p>
+
+                  <p className="mt-1 text-xs text-white/45">
+                    IEEE
+                  </p>
+                </div>
+              </div>
+
+              <span className="font-mono text-[9px] uppercase tracking-[0.18em] text-white/20">
+                MIT-ADT · CSE
+              </span>
+            </div>
+
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </div>
+</section> {/* Projects */}
 <section
   id="projects"
   className="border-t border-white/10 px-6 py-32"
 >
   <div className="mx-auto max-w-6xl">
+
     {/* Section heading */}
     <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
       <div>
@@ -307,33 +475,33 @@ export default function Home() {
       </div>
 
       <p className="max-w-md text-sm leading-6 text-white/40">
-        Projects built around real problems, technical experimentation,
-        and learning by doing.
+        A selection of projects where I&apos;ve explored software,
+        computer vision, IoT, AI, and real-world problem solving.
       </p>
     </div>
 
     {/* Project grid */}
-    <div className="mt-16 grid gap-5 md:grid-cols-2">
+    <div className="mt-16 grid gap-6 md:grid-cols-2">
 
-      {/* ───────────────── JOURNEASE ───────────────── */}
+      {/* ───────────────── DRIVE SAFE ───────────────── */}
       <article
         className="
           group relative overflow-hidden rounded-3xl
           border border-white/10
           bg-white/[0.02]
-          p-8
           transition-all duration-500
           hover:-translate-y-1
-          hover:border-white/20
+          hover:border-blue-400/20
           hover:bg-white/[0.04]
-          hover:shadow-2xl hover:shadow-black/30
         "
       >
-        {/* Accent */}
+        {/* Background glow */}
         <div
           className="
-            pointer-events-none absolute -right-20 -top-20
-            h-48 w-48 rounded-full
+            pointer-events-none absolute
+            -right-20 -top-20
+            h-56 w-56
+            rounded-full
             bg-blue-500/[0.08]
             blur-3xl
             transition duration-500
@@ -341,165 +509,188 @@ export default function Home() {
           "
         />
 
-        <div className="relative">
-          <div className="flex items-center justify-between">
-            <p className="text-xs uppercase tracking-[0.2em] text-white/30">
-              Smart India Hackathon · 2025
-            </p>
+        <div className="relative p-8 sm:p-10">
 
-            <span className="rounded-full border border-white/10 px-3 py-1 text-[10px] text-white/35">
-              TOP 100
+          <div className="flex items-start justify-between gap-4">
+            <div>
+              <p className="text-xs uppercase tracking-[0.2em] text-blue-300/50">
+                Computer Vision · IoT
+              </p>
+
+              <h3 className="mt-3 text-3xl font-semibold tracking-tight">
+                DriveSafe
+              </h3>
+            </div>
+
+            <span className="font-mono text-xs text-white/20">
+              01
             </span>
           </div>
 
-          <a
-  href="https://journeasesih.vercel.app/"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="mt-3 flex items-start justify-between gap-4"
->
-  <h3 className="text-2xl font-semibold">Journease</h3>
-
-  <span className="text-white/30 transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-white">
-    ↗
-  </span>
-</a>
-
-          <p className="mt-7 max-w-xl leading-7 text-white/50">
-            A smart travel companion built for the Smart India Hackathon,
-            designed to automatically track journeys, map routes, analyze
-            travel data, and generate useful reports.
+          <p className="mt-6 max-w-xl leading-7 text-white/50">
+            An IoT-assisted driver safety system designed to detect
+            drowsiness through camera-based eye analysis and respond
+            through connected hardware.
           </p>
 
-          <div className="mt-7 flex flex-wrap gap-2">
+          {/* Technologies */}
+          <div className="mt-8 flex flex-wrap gap-2">
             {[
-              "AI",
-              "Travel Analytics",
-              "Route Mapping",
-              "Cloud",
-              "Mobile",
+              "Computer Vision",
+              "EAR",
+              "ESP32",
+              "IoT",
             ].map((technology) => (
               <span
                 key={technology}
-                className="rounded-full bg-white/5 px-3 py-1.5 text-xs text-white/40"
+                className="
+                  rounded-full
+                  border border-white/10
+                  bg-white/[0.02]
+                  px-3 py-1.5
+                  text-xs text-white/45
+                "
               >
                 {technology}
               </span>
             ))}
           </div>
 
-          <div className="mt-8 flex items-center gap-5 border-t border-white/[0.07] pt-6">
-            <a
-              href="https://journeasesih.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm font-medium text-white transition hover:text-white/70"
-            >
-              View project ↗
-            </a>
-
-            <span className="text-white/10">/</span>
-
-            <a
-              href="https://github.com/omkailasmore"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm text-white/35 transition hover:text-white"
-            >
-              GitHub ↗
-            </a>
-          </div>
-        </div>
-      </article>
-
-      {/* ───────────────── DRIVESAFE ───────────────── */}
-      <article
-        className="
-          group relative overflow-hidden rounded-3xl
-          border border-white/10
-          bg-white/[0.02]
-          p-8
-          transition-all duration-500
-          hover:-translate-y-1
-          hover:border-white/20
-          hover:bg-white/[0.04]
-          hover:shadow-2xl hover:shadow-black/30
-        "
-      >
-        <div
-          className="
-            pointer-events-none absolute -right-20 -top-20
-            h-48 w-48 rounded-full
-            bg-cyan-500/[0.06]
-            blur-3xl
-            transition duration-500
-            group-hover:bg-cyan-500/[0.11]
-          "
-        />
-
-        <div className="relative">
-          <p className="text-xs uppercase tracking-[0.2em] text-white/30">
-            Computer Vision · IoT
-          </p>
-
+          {/* Links */}
+          <div className="mt-10 flex items-center gap-3">
           <a
   href="https://roaring-torte-d9b0a2.netlify.app/"
   target="_blank"
   rel="noopener noreferrer"
-  className="mt-3 flex items-start justify-between gap-4"
+  className="
+    rounded-full
+    border border-white/15
+    bg-white/[0.04]
+    px-5 py-2.5
+    text-xs font-medium text-white/80
+    transition-all duration-300
+    hover:-translate-y-0.5
+    hover:border-white/30
+    hover:bg-white/[0.08]
+    hover:text-white
+  "
 >
-  <h3 className="text-2xl font-semibold">DriveSafe</h3>
-
-  <span className="text-white/30 transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-white">
-    ↗
-  </span>
+  Live Project
+  <span className="ml-1.5 text-white/40">↗</span>
 </a>
-          <p className="mt-7 max-w-xl leading-7 text-white/50">
-            An IoT-assisted driver safety system that uses camera-based eye
-            analysis and Eye Aspect Ratio (EAR) detection to identify
-            drowsiness and trigger connected hardware responses.
+
+            <span className="text-xs text-white/20">
+              Project Showcase
+            </span>
+          </div>
+        </div>
+      </article>
+
+
+      {/* ───────────────── JOURNEASE ───────────────── */}
+      <article
+        className="
+          group relative overflow-hidden rounded-3xl
+          border border-white/10
+          bg-white/[0.02]
+          transition-all duration-500
+          hover:-translate-y-1
+          hover:border-purple-400/20
+          hover:bg-white/[0.04]
+        "
+      >
+        <div
+          className="
+            pointer-events-none absolute
+            -right-20 -top-20
+            h-56 w-56
+            rounded-full
+            bg-purple-500/[0.07]
+            blur-3xl
+            transition duration-500
+            group-hover:bg-purple-500/[0.12]
+          "
+        />
+
+        <div className="relative p-8 sm:p-10">
+
+          <div className="flex items-start justify-between gap-4">
+            <div>
+              <p className="text-xs uppercase tracking-[0.2em] text-purple-300/50">
+                Smart India Hackathon · 2025
+              </p>
+
+              <h3 className="mt-3 text-3xl font-semibold tracking-tight">
+                Journease
+              </h3>
+            </div>
+
+            <span className="font-mono text-xs text-white/20">
+              02
+            </span>
+          </div>
+
+          <p className="mt-6 max-w-xl leading-7 text-white/50">
+            A smart travel companion designed to help users manage
+            journeys, expenses, routes, analytics, and travel data
+            with integrated AI functionality.
           </p>
 
-          <div className="mt-7 flex flex-wrap gap-2">
+          <div className="mt-8 flex flex-wrap gap-2">
             {[
-              "Computer Vision",
-              "EAR",
-              "ESP8266",
-              "IoT",
-              "Hardware",
+              "AI",
+              "Web",
+              "Travel",
+              "Analytics",
             ].map((technology) => (
               <span
                 key={technology}
-                className="rounded-full bg-white/5 px-3 py-1.5 text-xs text-white/40"
+                className="
+                  rounded-full
+                  border border-white/10
+                  bg-white/[0.02]
+                  px-3 py-1.5
+                  text-xs text-white/45
+                "
               >
                 {technology}
               </span>
             ))}
           </div>
 
-          <div className="mt-8 flex items-center gap-5 border-t border-white/[0.07] pt-6">
-            <a
-              href="https://roaring-torte-d9b0a2.netlify.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm font-medium text-white transition hover:text-white/70"
-            >
-              View project ↗
-            </a>
-
-            <span className="text-white/10">/</span>
-
-            <span className="text-sm text-white/25">
-              Pratibhuti Exhibition
+          <div className="mt-10 flex items-center gap-3">
+           <a
+  href="https://journeasesih.vercel.app/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="
+    rounded-full
+    border border-white/15
+    bg-white/[0.04]
+    px-5 py-2.5
+    text-xs font-medium text-white/80
+    transition-all duration-300
+    hover:-translate-y-0.5
+    hover:border-white/30
+    hover:bg-white/[0.08]
+    hover:text-white
+  "
+>
+  Live Project
+  <span className="ml-1.5 text-white/40">↗</span>
+</a>
+            <span className="text-xs text-white/20">
+              Smart India Hackathon
             </span>
           </div>
         </div>
       </article>
+
 
       {/* ───────────────── SAHAAY ───────────────── */}
       <article
         className="
-          group relative overflow-hidden rounded-3xl
+          group rounded-3xl
           border border-white/10
           bg-white/[0.02]
           p-8
@@ -507,64 +698,63 @@ export default function Home() {
           hover:-translate-y-1
           hover:border-white/20
           hover:bg-white/[0.04]
-          hover:shadow-2xl hover:shadow-black/30
+          sm:p-10
         "
       >
-        <div className="relative">
-          <p className="text-xs uppercase tracking-[0.2em] text-white/30">
-            Design Thinking · Exhibition
-          </p>
+        <div className="flex items-start justify-between gap-4">
+          <div>
+            <p className="text-xs uppercase tracking-[0.2em] text-white/30">
+              Design Thinking
+            </p>
 
-          <div className="mt-5 flex items-start justify-between gap-4">
-            <div>
-              <h3 className="text-3xl font-semibold tracking-tight">
-                Sahaay
-              </h3>
+            <h3 className="mt-3 text-2xl font-semibold">
+              Sahaay
+            </h3>
+          </div>
 
-              <p className="mt-2 text-sm text-white/35">
-                Women&apos;s Safety Application
-              </p>
-            </div>
+          <span className="font-mono text-xs text-white/20">
+            03
+          </span>
+        </div>
 
-            <span className="text-xl text-white/20 transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-white">
-              ↗
+        <p className="mt-6 leading-7 text-white/45">
+          A women&apos;s safety application designed around real-world
+          situations involving cabs, public transportation, and
+          ride-hailing services.
+        </p>
+
+        <div className="mt-8 flex flex-wrap gap-2">
+          {[
+            "Safety",
+            "Design Thinking",
+            "Application",
+          ].map((technology) => (
+            <span
+              key={technology}
+              className="
+                rounded-full
+                border border-white/10
+                px-3 py-1.5
+                text-xs text-white/40
+              "
+            >
+              {technology}
             </span>
-          </div>
+          ))}
+        </div>
 
-          <p className="mt-7 max-w-xl leading-7 text-white/50">
-            A safety-focused application designed around real-world travel
-            situations involving cabs, public transportation, and
-            ride-hailing services.
-          </p>
-
-          <div className="mt-7 flex flex-wrap gap-2">
-            {[
-              "Safety",
-              "Design Thinking",
-              "Problem Solving",
-              "Application",
-            ].map((technology) => (
-              <span
-                key={technology}
-                className="rounded-full bg-white/5 px-3 py-1.5 text-xs text-white/40"
-              >
-                {technology}
-              </span>
-            ))}
-          </div>
-
-          <div className="mt-8 border-t border-white/[0.07] pt-6">
-            <span className="text-sm text-white/30">
-              Selected for Pratibhuti Exhibition
-            </span>
-          </div>
+        <div className="mt-8">
+          <span className="text-xs uppercase tracking-[0.15em] text-white/20">
+            Pratibhuti Exhibition
+          </span>
         </div>
       </article>
+
 
       {/* ───────────────── SCHOLAR AI ───────────────── */}
       <article
         className="
-          group relative overflow-hidden rounded-3xl
+          group rounded-3xl
           border border-white/10
           bg-white/[0.02]
           p-8
@@ -572,66 +762,58 @@ export default function Home() {
           hover:-translate-y-1
           hover:border-white/20
           hover:bg-white/[0.04]
-          hover:shadow-2xl hover:shadow-black/30
+          sm:p-10
         "
       >
-        <div className="relative">
-          <div className="flex items-center justify-between">
+        <div className="flex items-start justify-between gap-4">
+          <div>
             <p className="text-xs uppercase tracking-[0.2em] text-white/30">
               In Development
             </p>
 
-            <span className="flex items-center gap-2 text-[10px] uppercase tracking-wider text-green-400/60">
-              <span className="h-1.5 w-1.5 rounded-full bg-green-400" />
-              Building
+            <h3 className="mt-3 text-2xl font-semibold">
+              ScholarAI
+            </h3>
+          </div>
+
+          <span className="font-mono text-xs text-white/20">
+            04
+          </span>
+        </div>
+
+        <p className="mt-6 leading-7 text-white/45">
+          An academic-focused application exploring modern mobile
+          development, TypeScript, and AI-powered functionality.
+        </p>
+
+        <div className="mt-8 flex flex-wrap gap-2">
+          {[
+            "React Native",
+            "Expo",
+            "TypeScript",
+            "AI",
+          ].map((technology) => (
+            <span
+              key={technology}
+              className="
+                rounded-full
+                border border-white/10
+                px-3 py-1.5
+                text-xs text-white/40
+              "
+            >
+              {technology}
             </span>
-          </div>
+          ))}
+        </div>
 
-          <div className="mt-5 flex items-start justify-between gap-4">
-            <div>
-              <h3 className="text-3xl font-semibold tracking-tight">
-                ScholarAI
-              </h3>
-
-              <p className="mt-2 text-sm text-white/35">
-                AI-Powered Academic Platform
-              </p>
-            </div>
-
-            <span className="text-xl text-white/20 transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-white">
-              ↗
-            </span>
-          </div>
-
-          <p className="mt-7 max-w-xl leading-7 text-white/50">
-            An academic-focused application currently being developed while
-            exploring modern mobile development, TypeScript, and
-            AI-powered functionality.
-          </p>
-
-          <div className="mt-7 flex flex-wrap gap-2">
-            {[
-              "React Native",
-              "Expo",
-              "TypeScript",
-              "AI",
-            ].map((technology) => (
-              <span
-                key={technology}
-                className="rounded-full bg-white/5 px-3 py-1.5 text-xs text-white/40"
-              >
-                {technology}
-              </span>
-            ))}
-          </div>
-
-          <div className="mt-8 border-t border-white/[0.07] pt-6">
-            <span className="text-sm text-white/30">
-              More coming soon
-            </span>
-          </div>
+        <div className="mt-8">
+          <span className="text-xs uppercase tracking-[0.15em] text-white/20">
+            Currently building
+          </span>
         </div>
       </article>
+
     </div>
   </div>
 </section>
@@ -641,7 +823,9 @@ export default function Home() {
   className="border-t border-white/10 px-6 py-32"
 >
   <div className="mx-auto max-w-6xl">
-    <div className="grid gap-12 md:grid-cols-[1fr_2fr]">
+
+    {/* Header */}
+    <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
       <div>
         <p className="text-sm uppercase tracking-[0.25em] text-white/30">
           Achievements
@@ -652,102 +836,288 @@ export default function Home() {
         </h2>
       </div>
 
-      <div className="divide-y divide-white/10">
-        {/* Achievement 1 */}
-        <article className="py-8 first:pt-0">
-          <div className="flex flex-col justify-between gap-3 sm:flex-row sm:items-start">
-            <div>
-              <p className="text-xs uppercase tracking-[0.2em] text-white/30">
-                Smart India Hackathon · 2025
-              </p>
+      <p className="max-w-md text-sm leading-6 text-white/40">
+        A few moments that shaped the way I build, lead, and approach
+        engineering.
+      </p>
+    </div>
 
-              <h3 className="mt-2 text-xl font-medium">
-                Top 100 — Software Category
-              </h3>
+    {/* Timeline */}
+    <div className="relative mt-16">
 
-              <p className="mt-2 leading-7 text-white/40">
-                Selected among the top 100 teams from 900+ teams at the
-                university with Journease.
-              </p>
+      {/* Timeline line */}
+      <div
+        className="
+          absolute bottom-0 left-[11px] top-0
+          w-px bg-white/10
+          sm:left-[15px]
+        "
+      />
+
+      <div className="space-y-12">
+
+        {/* ───────────── 01 ───────────── */}
+        <article className="relative pl-10 sm:pl-12">
+
+          {/* Timeline dot */}
+          <span
+            className="
+              absolute left-[7px] top-1.5
+              h-[9px] w-[9px]
+              rounded-full
+              border border-white/30
+              bg-[#05070d]
+              shadow-[0_0_15px_rgba(255,255,255,0.15)]
+              sm:left-[11px]
+            "
+          />
+
+          <div
+            className="
+              group rounded-3xl
+              border border-white/10
+              bg-white/[0.02]
+              p-7
+              transition-all duration-300
+              hover:border-white/20
+              hover:bg-white/[0.04]
+              sm:p-8
+            "
+          >
+            <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-start">
+
+              <div>
+                <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-white/25">
+                  Smart India Hackathon · 2025
+                </p>
+
+                <h3 className="mt-3 text-xl font-semibold sm:text-2xl">
+                  Top 100 — Software Category
+                </h3>
+
+                <p className="mt-3 max-w-2xl leading-7 text-white/40">
+                  Selected among the top 100 software teams from 900+
+                  teams at the university with Journease.
+                </p>
+              </div>
+
+              <span className="shrink-0 font-mono text-xs text-white/20">
+                01
+              </span>
             </div>
 
-            <span className="text-sm text-white/30">
-              01
-            </span>
+            <div className="mt-6 flex flex-wrap gap-2">
+              <span className="rounded-full border border-white/10 px-3 py-1.5 text-xs text-white/40">
+                Hackathon
+              </span>
+
+              <span className="rounded-full border border-white/10 px-3 py-1.5 text-xs text-white/40">
+                Top 100
+              </span>
+
+              <span className="rounded-full border border-white/10 px-3 py-1.5 text-xs text-white/40">
+                Journease
+              </span>
+            </div>
           </div>
         </article>
 
-        {/* Achievement 2 */}
-        <article className="py-8">
-          <div className="flex flex-col justify-between gap-3 sm:flex-row sm:items-start">
-            <div>
-              <p className="text-xs uppercase tracking-[0.2em] text-white/30">
-                Pratibhuti Exhibition
-              </p>
 
-              <h3 className="mt-2 text-xl font-medium">
+        {/* ───────────── 02 ───────────── */}
+        <article className="relative pl-10 sm:pl-12">
+
+          <span
+            className="
+              absolute left-[7px] top-1.5
+              h-[9px] w-[9px]
+              rounded-full
+              border border-white/30
+              bg-[#05070d]
+              sm:left-[11px]
+            "
+          />
+
+          <div
+            className="
+              group rounded-3xl
+              border border-white/10
+              bg-white/[0.02]
+              p-7
+              transition-all duration-300
+              hover:border-white/20
+              hover:bg-white/[0.04]
+              sm:p-8
+            "
+          >
+            <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-start">
+
+              <div>
+                <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-white/25">
+                  Pratibhuti Exhibition
+                </p>
+
+                <h3 className="mt-3 text-xl font-semibold sm:text-2xl">
+                  Sahaay
+                </h3>
+
+                <p className="mt-3 max-w-2xl leading-7 text-white/40">
+                  Selected for exhibition with Sahaay, a women&apos;s
+                  safety application developed through Design Thinking.
+                </p>
+              </div>
+
+              <span className="shrink-0 font-mono text-xs text-white/20">
+                02
+              </span>
+            </div>
+
+            <div className="mt-6 flex flex-wrap gap-2">
+              <span className="rounded-full border border-white/10 px-3 py-1.5 text-xs text-white/40">
+                Design Thinking
+              </span>
+
+              <span className="rounded-full border border-white/10 px-3 py-1.5 text-xs text-white/40">
                 Sahaay
-              </h3>
+              </span>
 
-              <p className="mt-2 leading-7 text-white/40">
-                Selected for exhibition with Sahaay, a women's safety
-                application developed through Design Thinking.
-              </p>
+              <span className="rounded-full border border-white/10 px-3 py-1.5 text-xs text-white/40">
+                Exhibition
+              </span>
             </div>
-
-            <span className="text-sm text-white/30">
-              02
-            </span>
           </div>
         </article>
 
-        {/* Achievement 3 */}
-        <article className="py-8">
-          <div className="flex flex-col justify-between gap-3 sm:flex-row sm:items-start">
-            <div>
-              <p className="text-xs uppercase tracking-[0.2em] text-white/30">
-                Pratibhuti Exhibition
-              </p>
 
-              <h3 className="mt-2 text-xl font-medium">
-                DriveSafe
-              </h3>
+        {/* ───────────── 03 ───────────── */}
+        <article className="relative pl-10 sm:pl-12">
 
-              <p className="mt-2 leading-7 text-white/40">
-                Selected for exhibition with DriveSafe, an IoT and
-                computer-vision based driver safety project.
-              </p>
+          <span
+            className="
+              absolute left-[7px] top-1.5
+              h-[9px] w-[9px]
+              rounded-full
+              border border-white/30
+              bg-[#05070d]
+              sm:left-[11px]
+            "
+          />
+
+          <div
+            className="
+              group rounded-3xl
+              border border-white/10
+              bg-white/[0.02]
+              p-7
+              transition-all duration-300
+              hover:border-white/20
+              hover:bg-white/[0.04]
+              sm:p-8
+            "
+          >
+            <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-start">
+
+              <div>
+                <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-white/25">
+                  Pratibhuti Exhibition
+                </p>
+
+                <h3 className="mt-3 text-xl font-semibold sm:text-2xl">
+                  DriveSafe
+                </h3>
+
+                <p className="mt-3 max-w-2xl leading-7 text-white/40">
+                  Selected for exhibition with DriveSafe, an IoT and
+                  computer-vision based driver safety project.
+                </p>
+              </div>
+
+              <span className="shrink-0 font-mono text-xs text-white/20">
+                03
+              </span>
             </div>
 
-            <span className="text-sm text-white/30">
-              03
-            </span>
+            <div className="mt-6 flex flex-wrap gap-2">
+              <span className="rounded-full border border-white/10 px-3 py-1.5 text-xs text-white/40">
+                IoT
+              </span>
+
+              <span className="rounded-full border border-white/10 px-3 py-1.5 text-xs text-white/40">
+                Computer Vision
+              </span>
+
+              <span className="rounded-full border border-white/10 px-3 py-1.5 text-xs text-white/40">
+                Exhibition
+              </span>
+            </div>
           </div>
         </article>
 
-        {/* Achievement 4 */}
-        <article className="py-8 last:pb-0">
-          <div className="flex flex-col justify-between gap-3 sm:flex-row sm:items-start">
-            <div>
-              <p className="text-xs uppercase tracking-[0.2em] text-white/30">
+
+        {/* ───────────── 04 ───────────── */}
+        <article className="relative pl-10 sm:pl-12">
+
+          <span
+            className="
+              absolute left-[7px] top-1.5
+              h-[9px] w-[9px]
+              rounded-full
+              border border-blue-400/40
+              bg-[#05070d]
+              shadow-[0_0_15px_rgba(96,165,250,0.2)]
+              sm:left-[11px]
+            "
+          />
+
+          <div
+            className="
+              group rounded-3xl
+              border border-blue-400/10
+              bg-blue-400/[0.02]
+              p-7
+              transition-all duration-300
+              hover:border-blue-400/20
+              hover:bg-blue-400/[0.04]
+              sm:p-8
+            "
+          >
+            <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-start">
+
+              <div>
+                <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-blue-300/40">
+                  Leadership · 2026
+                </p>
+
+                <h3 className="mt-3 text-xl font-semibold sm:text-2xl">
+                  Technical &amp; Project Leadership
+                </h3>
+
+                <p className="mt-3 max-w-2xl leading-7 text-white/40">
+                  Leading teams across IEEE Web Development, PBL,
+                  Entrepreneurship, and Smart India Hackathon 2026.
+                </p>
+              </div>
+
+              <span className="shrink-0 font-mono text-xs text-blue-300/30">
+                NOW
+              </span>
+            </div>
+
+            <div className="mt-6 flex flex-wrap gap-2">
+              <span className="rounded-full border border-blue-400/10 px-3 py-1.5 text-xs text-blue-300/50">
+                IEEE
+              </span>
+
+              <span className="rounded-full border border-blue-400/10 px-3 py-1.5 text-xs text-blue-300/50">
                 Leadership
-              </p>
+              </span>
 
-              <h3 className="mt-2 text-xl font-medium">
-                Technical & Project Leadership
-              </h3>
-
-              <p className="mt-2 leading-7 text-white/40">
-                Leading teams across IEEE Web Development, PBL,
-                Entrepreneurship, and Smart India Hackathon 2026.
-              </p>
+              <span className="rounded-full border border-blue-400/10 px-3 py-1.5 text-xs text-blue-300/50">
+                Team Building
+              </span>
             </div>
-
-            <span className="text-sm text-white/30">
-              04
-            </span>
           </div>
         </article>
+
       </div>
     </div>
   </div>
@@ -757,93 +1127,262 @@ export default function Home() {
   className="border-t border-white/10 px-6 py-32"
 >
   <div className="mx-auto max-w-6xl">
-    <div className="grid gap-12 md:grid-cols-[1fr_2fr]">
+
+    {/* Header */}
+    <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
       <div>
         <p className="text-sm uppercase tracking-[0.25em] text-white/30">
           Skills
         </p>
 
         <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
-          What I work with.
+          Tools I build with.
         </h2>
       </div>
 
-      <div className="grid gap-4 sm:grid-cols-2">
-        {/* Languages */}
-        <div className="rounded-3xl border border-white/10 bg-white/[0.02] p-7">
-          <p className="text-sm text-white/30">Languages</p>
+      <p className="max-w-md text-sm leading-6 text-white/40">
+        A growing technical foundation across programming, web development,
+        databases, and software engineering.
+      </p>
+    </div>
 
-          <div className="mt-5 flex flex-wrap gap-2">
-            {["C++", "C", "Java", "SQL", "JavaScript", "TypeScript"].map(
-              (skill) => (
-                <span
-                  key={skill}
-                  className="rounded-full border border-white/10 px-3 py-1.5 text-sm text-white/60"
-                >
-                  {skill}
-                </span>
-              )
-            )}
-          </div>
-        </div>
+    {/* Skills grid */}
+    <div className="mt-16 grid gap-4 sm:grid-cols-2">
 
-        {/* Web */}
-        <div className="rounded-3xl border border-white/10 bg-white/[0.02] p-7">
-          <p className="text-sm text-white/30">Web Development</p>
-
-          <div className="mt-5 flex flex-wrap gap-2">
-            {["HTML", "CSS", "React", "Next.js", "Tailwind CSS"].map(
-              (skill) => (
-                <span
-                  key={skill}
-                  className="rounded-full border border-white/10 px-3 py-1.5 text-sm text-white/60"
-                >
-                  {skill}
-                </span>
-              )
-            )}
-          </div>
-        </div>
-
-        {/* Mobile */}
-        <div className="rounded-3xl border border-white/10 bg-white/[0.02] p-7">
-          <p className="text-sm text-white/30">Mobile</p>
-
-          <div className="mt-5 flex flex-wrap gap-2">
-            {["React Native", "Expo"].map((skill) => (
-              <span
-                key={skill}
-                className="rounded-full border border-white/10 px-3 py-1.5 text-sm text-white/60"
-              >
-                {skill}
-              </span>
-            ))}
-          </div>
-        </div>
-
-        {/* Databases & Tools */}
-        <div className="rounded-3xl border border-white/10 bg-white/[0.02] p-7">
-          <p className="text-sm text-white/30">Databases & Tools</p>
-
-          <div className="mt-5 flex flex-wrap gap-2">
-            {["MySQL", "Git", "GitHub", "VS Code"].map((skill) => (
-              <span
-                key={skill}
-                className="rounded-full border border-white/10 px-3 py-1.5 text-sm text-white/60"
-              >
-                {skill}
-              </span>
-            ))}
-          </div>
-        </div>
-
-        {/* Exploring */}
-        <div className="rounded-3xl border border-white/10 bg-white/[0.02] p-7 sm:col-span-2">
-          <p className="text-sm text-white/30">
-            Currently Exploring
+      {/* Programming */}
+      <div
+        className="
+          group rounded-3xl
+          border border-white/10
+          bg-white/[0.02]
+          p-7
+          transition-all duration-300
+          hover:border-white/20
+          hover:bg-white/[0.04]
+        "
+      >
+        <div className="flex items-center justify-between">
+          <p className="text-sm text-white/40">
+            01 · Programming
           </p>
 
-          <div className="mt-5 flex flex-wrap gap-2">
+          <span className="font-mono text-[10px] text-white/20">
+            CORE
+          </span>
+        </div>
+
+        <div className="mt-6 flex flex-wrap gap-2">
+          {[
+            "C++",
+            "C",
+            "Java",
+            "JavaScript",
+            "TypeScript",
+            "SQL",
+          ].map((skill) => (
+            <span
+              key={skill}
+              className="
+                rounded-full
+                border border-white/10
+                bg-white/[0.02]
+                px-3 py-1.5
+                text-sm text-white/60
+                transition
+                group-hover:border-white/15
+              "
+            >
+              {skill}
+            </span>
+          ))}
+        </div>
+      </div>
+
+
+      {/* Web Development */}
+      <div
+        className="
+          group rounded-3xl
+          border border-white/10
+          bg-white/[0.02]
+          p-7
+          transition-all duration-300
+          hover:border-white/20
+          hover:bg-white/[0.04]
+        "
+      >
+        <div className="flex items-center justify-between">
+          <p className="text-sm text-white/40">
+            02 · Web Development
+          </p>
+
+          <span className="font-mono text-[10px] text-white/20">
+            BUILD
+          </span>
+        </div>
+
+        <div className="mt-6 flex flex-wrap gap-2">
+          {[
+            "HTML",
+            "CSS",
+            "React",
+            "Next.js",
+            "Tailwind CSS",
+          ].map((skill) => (
+            <span
+              key={skill}
+              className="
+                rounded-full
+                border border-white/10
+                bg-white/[0.02]
+                px-3 py-1.5
+                text-sm text-white/60
+              "
+            >
+              {skill}
+            </span>
+          ))}
+        </div>
+      </div>
+
+
+      {/* Databases & Tools */}
+      <div
+        className="
+          group rounded-3xl
+          border border-white/10
+          bg-white/[0.02]
+          p-7
+          transition-all duration-300
+          hover:border-white/20
+          hover:bg-white/[0.04]
+        "
+      >
+        <div className="flex items-center justify-between">
+          <p className="text-sm text-white/40">
+            03 · Databases &amp; Tools
+          </p>
+
+          <span className="font-mono text-[10px] text-white/20">
+            SYSTEMS
+          </span>
+        </div>
+
+        <div className="mt-6 flex flex-wrap gap-2">
+          {[
+            "MySQL",
+            "Git",
+            "GitHub",
+            "VS Code",
+          ].map((skill) => (
+            <span
+              key={skill}
+              className="
+                rounded-full
+                border border-white/10
+                bg-white/[0.02]
+                px-3 py-1.5
+                text-sm text-white/60
+              "
+            >
+              {skill}
+            </span>
+          ))}
+        </div>
+      </div>
+
+
+      {/* Engineering */}
+      <div
+        className="
+          group rounded-3xl
+          border border-white/10
+          bg-white/[0.02]
+          p-7
+          transition-all duration-300
+          hover:border-white/20
+          hover:bg-white/[0.04]
+        "
+      >
+        <div className="flex items-center justify-between">
+          <p className="text-sm text-white/40">
+            04 · Engineering
+          </p>
+
+          <span className="font-mono text-[10px] text-white/20">
+            FUNDAMENTALS
+          </span>
+        </div>
+
+        <div className="mt-6 flex flex-wrap gap-2">
+          {[
+            "Data Structures",
+            "Algorithms",
+            "OOP",
+            "Problem Solving",
+            "Git Workflow",
+          ].map((skill) => (
+            <span
+              key={skill}
+              className="
+                rounded-full
+                border border-white/10
+                bg-white/[0.02]
+                px-3 py-1.5
+                text-sm text-white/60
+              "
+            >
+              {skill}
+            </span>
+          ))}
+        </div>
+      </div>
+
+
+      {/* Currently Exploring */}
+      <div
+        className="
+          group relative overflow-hidden
+          rounded-3xl
+          border border-blue-400/10
+          bg-blue-400/[0.02]
+          p-7
+          transition-all duration-300
+          hover:border-blue-400/20
+          hover:bg-blue-400/[0.04]
+          sm:col-span-2
+        "
+      >
+        {/* Glow */}
+        <div
+          className="
+            pointer-events-none absolute
+            -right-20 -top-20
+            h-48 w-48
+            rounded-full
+            bg-blue-500/[0.08]
+            blur-3xl
+          "
+        />
+
+        <div className="relative">
+          <div className="flex items-center justify-between">
+            <p className="text-sm text-blue-300/50">
+              05 · Currently Exploring
+            </p>
+
+            <span className="flex items-center gap-2 font-mono text-[10px] text-green-400/60">
+              <span className="h-1.5 w-1.5 rounded-full bg-green-400" />
+              IN PROGRESS
+            </span>
+          </div>
+
+          <p className="mt-3 max-w-2xl text-sm leading-6 text-white/35">
+            Expanding beyond the frontend into backend systems, cloud
+            infrastructure, DevOps, and deeper computer science fundamentals.
+          </p>
+
+          <div className="mt-6 flex flex-wrap gap-2">
             {[
               "Node.js",
               "Backend Development",
@@ -855,7 +1394,13 @@ export default function Home() {
             ].map((skill) => (
               <span
                 key={skill}
-                className="rounded-full border border-white/10 px-3 py-1.5 text-sm text-white/60"
+                className="
+                  rounded-full
+                  border border-blue-400/10
+                  bg-blue-400/[0.03]
+                  px-3 py-1.5
+                  text-sm text-blue-200/50
+                "
               >
                 {skill}
               </span>
@@ -863,6 +1408,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </section>
