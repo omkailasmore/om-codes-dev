@@ -824,9 +824,10 @@ export default function Home() {
 >
   <div className="mx-auto max-w-6xl">
 
-    {/* Header */}
-    <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
-      <div>
+    <div className="grid gap-12 md:grid-cols-[0.8fr_2fr]">
+
+      {/* Left */}
+      <div className="md:sticky md:top-32 md:self-start">
         <p className="text-sm uppercase tracking-[0.25em] text-white/30">
           Achievements
         </p>
@@ -834,287 +835,260 @@ export default function Home() {
         <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
           Milestones so far.
         </h2>
+
+        <p className="mt-6 max-w-xs text-sm leading-7 text-white/35">
+          A collection of competitions, exhibitions, and leadership
+          experiences that have shaped how I build and solve problems.
+        </p>
+
+        <div className="mt-10 hidden items-center gap-3 md:flex">
+          <span className="h-px w-10 bg-white/20" />
+
+          <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-white/20">
+            SELECTED MILESTONES
+          </span>
+        </div>
       </div>
 
-      <p className="max-w-md text-sm leading-6 text-white/40">
-        A few moments that shaped the way I build, lead, and approach
-        engineering.
-      </p>
-    </div>
+      {/* Right */}
+      <div className="space-y-4">
 
-    {/* Timeline */}
-    <div className="relative mt-16">
-
-      {/* Timeline line */}
-      <div
-        className="
-          absolute bottom-0 left-[11px] top-0
-          w-px bg-white/10
-          sm:left-[15px]
-        "
-      />
-
-      <div className="space-y-12">
-
-        {/* ───────────── 01 ───────────── */}
-        <article className="relative pl-10 sm:pl-12">
-
-          {/* Timeline dot */}
-          <span
-            className="
-              absolute left-[7px] top-1.5
-              h-[9px] w-[9px]
-              rounded-full
-              border border-white/30
-              bg-[#05070d]
-              shadow-[0_0_15px_rgba(255,255,255,0.15)]
-              sm:left-[11px]
-            "
-          />
-
+        {/* SIH */}
+        <article
+          className="
+            group relative overflow-hidden
+            rounded-[28px]
+            border border-white/10
+            bg-white/[0.025]
+            p-7
+            transition-all duration-500
+            hover:border-white/20
+            hover:bg-white/[0.04]
+            sm:p-9
+          "
+        >
+          {/* Glow */}
           <div
             className="
-              group rounded-3xl
-              border border-white/10
-              bg-white/[0.02]
-              p-7
-              transition-all duration-300
-              hover:border-white/20
-              hover:bg-white/[0.04]
-              sm:p-8
+              pointer-events-none absolute
+              -right-20 -top-20
+              h-56 w-56
+              rounded-full
+              bg-blue-500/[0.05]
+              blur-3xl
+              transition duration-500
+              group-hover:bg-blue-500/[0.09]
             "
-          >
-            <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-start">
+            aria-hidden="true"
+          />
 
-              <div>
-                <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-white/25">
+          <div className="relative flex flex-col gap-8 sm:flex-row sm:justify-between">
+
+            <div className="max-w-2xl">
+
+              <div className="flex items-center gap-3">
+                <span className="font-mono text-[10px] text-blue-300/60">
+                  01
+                </span>
+
+                <span className="h-px w-6 bg-white/10" />
+
+                <p className="text-xs uppercase tracking-[0.2em] text-white/30">
                   Smart India Hackathon · 2025
-                </p>
-
-                <h3 className="mt-3 text-xl font-semibold sm:text-2xl">
-                  Top 100 — Software Category
-                </h3>
-
-                <p className="mt-3 max-w-2xl leading-7 text-white/40">
-                  Selected among the top 100 software teams from 900+
-                  teams at the university with Journease.
                 </p>
               </div>
 
-              <span className="shrink-0 font-mono text-xs text-white/20">
+              <h3 className="mt-5 text-2xl font-semibold tracking-tight sm:text-3xl">
+                Top 100
+                <span className="text-white/40">
+                  {" "}— Software Category
+                </span>
+              </h3>
+
+              <p className="mt-4 leading-7 text-white/45">
+                Selected among the top 100 teams from 900+ teams at the
+                university with <span className="text-white/70">Journease</span>,
+                a smart travel companion focused on travel management,
+                analytics, and AI-powered functionality.
+              </p>
+
+              <div className="mt-7 flex flex-wrap gap-2">
+                {["Smart India Hackathon", "Top 100", "Journease", "AI"].map(
+                  (item) => (
+                    <span
+                      key={item}
+                      className="
+                        rounded-full
+                        border border-white/[0.07]
+                        bg-white/[0.025]
+                        px-3 py-1.5
+                        text-xs text-white/45
+                      "
+                    >
+                      {item}
+                    </span>
+                  )
+                )}
+              </div>
+            </div>
+
+            <div className="shrink-0">
+              <span
+                className="
+                  inline-flex h-16 w-16
+                  items-center justify-center
+                  rounded-2xl
+                  border border-white/10
+                  bg-white/[0.03]
+                  font-mono text-sm
+                  text-white/40
+                  transition
+                  group-hover:border-blue-400/20
+                  group-hover:text-blue-300/70
+                "
+              >
                 01
               </span>
             </div>
 
-            <div className="mt-6 flex flex-wrap gap-2">
-              <span className="rounded-full border border-white/10 px-3 py-1.5 text-xs text-white/40">
-                Hackathon
-              </span>
-
-              <span className="rounded-full border border-white/10 px-3 py-1.5 text-xs text-white/40">
-                Top 100
-              </span>
-
-              <span className="rounded-full border border-white/10 px-3 py-1.5 text-xs text-white/40">
-                Journease
-              </span>
-            </div>
           </div>
         </article>
 
+        {/* Exhibition */}
+        <article
+          className="
+            group rounded-[28px]
+            border border-white/10
+            bg-white/[0.015]
+            p-7
+            transition-all duration-300
+            hover:border-white/20
+            hover:bg-white/[0.03]
+            sm:p-8
+          "
+        >
+          <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
 
-        {/* ───────────── 02 ───────────── */}
-        <article className="relative pl-10 sm:pl-12">
+            <div>
+              <div className="flex items-center gap-3">
+                <span className="font-mono text-[10px] text-white/25">
+                  02
+                </span>
 
-          <span
-            className="
-              absolute left-[7px] top-1.5
-              h-[9px] w-[9px]
-              rounded-full
-              border border-white/30
-              bg-[#05070d]
-              sm:left-[11px]
-            "
-          />
+                <span className="h-px w-6 bg-white/10" />
 
-          <div
-            className="
-              group rounded-3xl
-              border border-white/10
-              bg-white/[0.02]
-              p-7
-              transition-all duration-300
-              hover:border-white/20
-              hover:bg-white/[0.04]
-              sm:p-8
-            "
-          >
-            <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-start">
-
-              <div>
-                <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-white/25">
+                <p className="text-xs uppercase tracking-[0.2em] text-white/30">
                   Pratibhuti Exhibition
-                </p>
-
-                <h3 className="mt-3 text-xl font-semibold sm:text-2xl">
-                  Sahaay
-                </h3>
-
-                <p className="mt-3 max-w-2xl leading-7 text-white/40">
-                  Selected for exhibition with Sahaay, a women&apos;s
-                  safety application developed through Design Thinking.
                 </p>
               </div>
 
-              <span className="shrink-0 font-mono text-xs text-white/20">
-                02
-              </span>
-            </div>
-
-            <div className="mt-6 flex flex-wrap gap-2">
-              <span className="rounded-full border border-white/10 px-3 py-1.5 text-xs text-white/40">
-                Design Thinking
-              </span>
-
-              <span className="rounded-full border border-white/10 px-3 py-1.5 text-xs text-white/40">
+              <h3 className="mt-4 text-xl font-medium">
                 Sahaay
-              </span>
+              </h3>
 
-              <span className="rounded-full border border-white/10 px-3 py-1.5 text-xs text-white/40">
-                Exhibition
-              </span>
+              <p className="mt-3 max-w-2xl leading-7 text-white/40">
+                Selected for exhibition with Sahaay, a women&apos;s safety
+                application developed through Design Thinking and focused
+                on real-world transportation scenarios.
+              </p>
             </div>
+
+            <span className="font-mono text-xs text-white/20 transition group-hover:text-white/40">
+              EXHIBITED
+            </span>
+
           </div>
         </article>
 
+        {/* DriveSafe */}
+        <article
+          className="
+            group rounded-[28px]
+            border border-white/10
+            bg-white/[0.015]
+            p-7
+            transition-all duration-300
+            hover:border-white/20
+            hover:bg-white/[0.03]
+            sm:p-8
+          "
+        >
+          <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
 
-        {/* ───────────── 03 ───────────── */}
-        <article className="relative pl-10 sm:pl-12">
+            <div>
+              <div className="flex items-center gap-3">
+                <span className="font-mono text-[10px] text-white/25">
+                  03
+                </span>
 
-          <span
-            className="
-              absolute left-[7px] top-1.5
-              h-[9px] w-[9px]
-              rounded-full
-              border border-white/30
-              bg-[#05070d]
-              sm:left-[11px]
-            "
-          />
+                <span className="h-px w-6 bg-white/10" />
 
-          <div
-            className="
-              group rounded-3xl
-              border border-white/10
-              bg-white/[0.02]
-              p-7
-              transition-all duration-300
-              hover:border-white/20
-              hover:bg-white/[0.04]
-              sm:p-8
-            "
-          >
-            <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-start">
-
-              <div>
-                <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-white/25">
+                <p className="text-xs uppercase tracking-[0.2em] text-white/30">
                   Pratibhuti Exhibition
                 </p>
-
-                <h3 className="mt-3 text-xl font-semibold sm:text-2xl">
-                  DriveSafe
-                </h3>
-
-                <p className="mt-3 max-w-2xl leading-7 text-white/40">
-                  Selected for exhibition with DriveSafe, an IoT and
-                  computer-vision based driver safety project.
-                </p>
               </div>
 
-              <span className="shrink-0 font-mono text-xs text-white/20">
-                03
-              </span>
+              <h3 className="mt-4 text-xl font-medium">
+                DriveSafe
+              </h3>
+
+              <p className="mt-3 max-w-2xl leading-7 text-white/40">
+                Selected for exhibition with DriveSafe, an IoT and
+                computer-vision based driver safety project designed to
+                detect drowsiness through camera-based analysis.
+              </p>
             </div>
 
-            <div className="mt-6 flex flex-wrap gap-2">
-              <span className="rounded-full border border-white/10 px-3 py-1.5 text-xs text-white/40">
-                IoT
-              </span>
+            <span className="font-mono text-xs text-white/20 transition group-hover:text-white/40">
+              EXHIBITED
+            </span>
 
-              <span className="rounded-full border border-white/10 px-3 py-1.5 text-xs text-white/40">
-                Computer Vision
-              </span>
-
-              <span className="rounded-full border border-white/10 px-3 py-1.5 text-xs text-white/40">
-                Exhibition
-              </span>
-            </div>
           </div>
         </article>
 
+        {/* Leadership */}
+        <article
+          className="
+            group rounded-[28px]
+            border border-white/10
+            bg-white/[0.015]
+            p-7
+            transition-all duration-300
+            hover:border-white/20
+            hover:bg-white/[0.03]
+            sm:p-8
+          "
+        >
+          <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
 
-        {/* ───────────── 04 ───────────── */}
-        <article className="relative pl-10 sm:pl-12">
+            <div>
+              <div className="flex items-center gap-3">
+                <span className="font-mono text-[10px] text-white/25">
+                  04
+                </span>
 
-          <span
-            className="
-              absolute left-[7px] top-1.5
-              h-[9px] w-[9px]
-              rounded-full
-              border border-blue-400/40
-              bg-[#05070d]
-              shadow-[0_0_15px_rgba(96,165,250,0.2)]
-              sm:left-[11px]
-            "
-          />
+                <span className="h-px w-6 bg-white/10" />
 
-          <div
-            className="
-              group rounded-3xl
-              border border-blue-400/10
-              bg-blue-400/[0.02]
-              p-7
-              transition-all duration-300
-              hover:border-blue-400/20
-              hover:bg-blue-400/[0.04]
-              sm:p-8
-            "
-          >
-            <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-start">
-
-              <div>
-                <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-blue-300/40">
-                  Leadership · 2026
-                </p>
-
-                <h3 className="mt-3 text-xl font-semibold sm:text-2xl">
-                  Technical &amp; Project Leadership
-                </h3>
-
-                <p className="mt-3 max-w-2xl leading-7 text-white/40">
-                  Leading teams across IEEE Web Development, PBL,
-                  Entrepreneurship, and Smart India Hackathon 2026.
+                <p className="text-xs uppercase tracking-[0.2em] text-white/30">
+                  Leadership
                 </p>
               </div>
 
-              <span className="shrink-0 font-mono text-xs text-blue-300/30">
-                NOW
-              </span>
+              <h3 className="mt-4 text-xl font-medium">
+                Technical &amp; Project Leadership
+              </h3>
+
+              <p className="mt-3 max-w-2xl leading-7 text-white/40">
+                Taking technical and project leadership responsibilities
+                across IEEE Web Development, PBL, Entrepreneurship, and
+                Smart India Hackathon activities.
+              </p>
             </div>
 
-            <div className="mt-6 flex flex-wrap gap-2">
-              <span className="rounded-full border border-blue-400/10 px-3 py-1.5 text-xs text-blue-300/50">
-                IEEE
-              </span>
+            <span className="font-mono text-xs text-white/20 transition group-hover:text-white/40">
+              LEAD
+            </span>
 
-              <span className="rounded-full border border-blue-400/10 px-3 py-1.5 text-xs text-blue-300/50">
-                Leadership
-              </span>
-
-              <span className="rounded-full border border-blue-400/10 px-3 py-1.5 text-xs text-blue-300/50">
-                Team Building
-              </span>
-            </div>
           </div>
         </article>
 
@@ -1128,261 +1102,279 @@ export default function Home() {
 >
   <div className="mx-auto max-w-6xl">
 
-    {/* Header */}
-    <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
-      <div>
+    <div className="grid gap-12 md:grid-cols-[0.8fr_2fr]">
+
+      {/* Left */}
+      <div className="md:sticky md:top-32 md:self-start">
         <p className="text-sm uppercase tracking-[0.25em] text-white/30">
           Skills
         </p>
 
         <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
-          Tools I build with.
+          What I work with.
         </h2>
-      </div>
 
-      <p className="max-w-md text-sm leading-6 text-white/40">
-        A growing technical foundation across programming, web development,
-        databases, and software engineering.
-      </p>
-    </div>
+        <p className="mt-6 max-w-xs text-sm leading-7 text-white/35">
+          Technologies I use to build, experiment, and turn ideas into
+          working software.
+        </p>
 
-    {/* Skills grid */}
-    <div className="mt-16 grid gap-4 sm:grid-cols-2">
+        <div className="mt-10 hidden items-center gap-3 md:flex">
+          <span className="h-px w-10 bg-white/20" />
 
-      {/* Programming */}
-      <div
-        className="
-          group rounded-3xl
-          border border-white/10
-          bg-white/[0.02]
-          p-7
-          transition-all duration-300
-          hover:border-white/20
-          hover:bg-white/[0.04]
-        "
-      >
-        <div className="flex items-center justify-between">
-          <p className="text-sm text-white/40">
-            01 · Programming
-          </p>
-
-          <span className="font-mono text-[10px] text-white/20">
-            CORE
+          <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-white/20">
+            TECH_STACK / 2026
           </span>
         </div>
-
-        <div className="mt-6 flex flex-wrap gap-2">
-          {[
-            "C++",
-            "C",
-            "Java",
-            "JavaScript",
-            "TypeScript",
-            "SQL",
-          ].map((skill) => (
-            <span
-              key={skill}
-              className="
-                rounded-full
-                border border-white/10
-                bg-white/[0.02]
-                px-3 py-1.5
-                text-sm text-white/60
-                transition
-                group-hover:border-white/15
-              "
-            >
-              {skill}
-            </span>
-          ))}
-        </div>
       </div>
 
+      {/* Right */}
+      <div className="grid gap-4 sm:grid-cols-2">
 
-      {/* Web Development */}
-      <div
-        className="
-          group rounded-3xl
-          border border-white/10
-          bg-white/[0.02]
-          p-7
-          transition-all duration-300
-          hover:border-white/20
-          hover:bg-white/[0.04]
-        "
-      >
-        <div className="flex items-center justify-between">
-          <p className="text-sm text-white/40">
-            02 · Web Development
-          </p>
-
-          <span className="font-mono text-[10px] text-white/20">
-            BUILD
-          </span>
-        </div>
-
-        <div className="mt-6 flex flex-wrap gap-2">
-          {[
-            "HTML",
-            "CSS",
-            "React",
-            "Next.js",
-            "Tailwind CSS",
-          ].map((skill) => (
-            <span
-              key={skill}
-              className="
-                rounded-full
-                border border-white/10
-                bg-white/[0.02]
-                px-3 py-1.5
-                text-sm text-white/60
-              "
-            >
-              {skill}
-            </span>
-          ))}
-        </div>
-      </div>
-
-
-      {/* Databases & Tools */}
-      <div
-        className="
-          group rounded-3xl
-          border border-white/10
-          bg-white/[0.02]
-          p-7
-          transition-all duration-300
-          hover:border-white/20
-          hover:bg-white/[0.04]
-        "
-      >
-        <div className="flex items-center justify-between">
-          <p className="text-sm text-white/40">
-            03 · Databases &amp; Tools
-          </p>
-
-          <span className="font-mono text-[10px] text-white/20">
-            SYSTEMS
-          </span>
-        </div>
-
-        <div className="mt-6 flex flex-wrap gap-2">
-          {[
-            "MySQL",
-            "Git",
-            "GitHub",
-            "VS Code",
-          ].map((skill) => (
-            <span
-              key={skill}
-              className="
-                rounded-full
-                border border-white/10
-                bg-white/[0.02]
-                px-3 py-1.5
-                text-sm text-white/60
-              "
-            >
-              {skill}
-            </span>
-          ))}
-        </div>
-      </div>
-
-
-      {/* Engineering */}
-      <div
-        className="
-          group rounded-3xl
-          border border-white/10
-          bg-white/[0.02]
-          p-7
-          transition-all duration-300
-          hover:border-white/20
-          hover:bg-white/[0.04]
-        "
-      >
-        <div className="flex items-center justify-between">
-          <p className="text-sm text-white/40">
-            04 · Engineering
-          </p>
-
-          <span className="font-mono text-[10px] text-white/20">
-            FUNDAMENTALS
-          </span>
-        </div>
-
-        <div className="mt-6 flex flex-wrap gap-2">
-          {[
-            "Data Structures",
-            "Algorithms",
-            "OOP",
-            "Problem Solving",
-            "Git Workflow",
-          ].map((skill) => (
-            <span
-              key={skill}
-              className="
-                rounded-full
-                border border-white/10
-                bg-white/[0.02]
-                px-3 py-1.5
-                text-sm text-white/60
-              "
-            >
-              {skill}
-            </span>
-          ))}
-        </div>
-      </div>
-
-
-      {/* Currently Exploring */}
-      <div
-        className="
-          group relative overflow-hidden
-          rounded-3xl
-          border border-blue-400/10
-          bg-blue-400/[0.02]
-          p-7
-          transition-all duration-300
-          hover:border-blue-400/20
-          hover:bg-blue-400/[0.04]
-          sm:col-span-2
-        "
-      >
-        {/* Glow */}
-        <div
+        {/* Languages */}
+        <article
           className="
-            pointer-events-none absolute
-            -right-20 -top-20
-            h-48 w-48
-            rounded-full
-            bg-blue-500/[0.08]
-            blur-3xl
+            group rounded-[26px]
+            border border-white/10
+            bg-white/[0.02]
+            p-7
+            transition-all duration-300
+            hover:border-white/20
+            hover:bg-white/[0.035]
           "
-        />
-
-        <div className="relative">
+        >
           <div className="flex items-center justify-between">
-            <p className="text-sm text-blue-300/50">
-              05 · Currently Exploring
+            <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-white/30">
+              01 / Languages
             </p>
 
-            <span className="flex items-center gap-2 font-mono text-[10px] text-green-400/60">
-              <span className="h-1.5 w-1.5 rounded-full bg-green-400" />
+            <span className="text-xs text-white/15 group-hover:text-white/40">
+              →
+            </span>
+          </div>
+
+          <div className="mt-6 flex flex-wrap gap-2">
+            {[
+              "C++",
+              "C",
+              "Java",
+              "SQL",
+              "JavaScript",
+              "TypeScript",
+            ].map((skill) => (
+              <span
+                key={skill}
+                className="
+                  rounded-full
+                  border border-white/[0.08]
+                  bg-white/[0.025]
+                  px-3 py-1.5
+                  text-sm text-white/55
+                  transition
+                  group-hover:border-white/10
+                  group-hover:text-white/70
+                "
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
+        </article>
+
+        {/* Web */}
+        <article
+          className="
+            group rounded-[26px]
+            border border-white/10
+            bg-white/[0.02]
+            p-7
+            transition-all duration-300
+            hover:border-white/20
+            hover:bg-white/[0.035]
+          "
+        >
+          <div className="flex items-center justify-between">
+            <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-white/30">
+              02 / Web
+            </p>
+
+            <span className="text-xs text-white/15 group-hover:text-white/40">
+              →
+            </span>
+          </div>
+
+          <div className="mt-6 flex flex-wrap gap-2">
+            {[
+              "HTML",
+              "CSS",
+              "React",
+              "Next.js",
+              "Tailwind CSS",
+            ].map((skill) => (
+              <span
+                key={skill}
+                className="
+                  rounded-full
+                  border border-white/[0.08]
+                  bg-white/[0.025]
+                  px-3 py-1.5
+                  text-sm text-white/55
+                  transition
+                  group-hover:border-white/10
+                  group-hover:text-white/70
+                "
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
+        </article>
+
+        {/* Mobile */}
+        <article
+          className="
+            group rounded-[26px]
+            border border-white/10
+            bg-white/[0.02]
+            p-7
+            transition-all duration-300
+            hover:border-white/20
+            hover:bg-white/[0.035]
+          "
+        >
+          <div className="flex items-center justify-between">
+            <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-white/30">
+              03 / Mobile
+            </p>
+
+            <span className="text-xs text-white/15 group-hover:text-white/40">
+              →
+            </span>
+          </div>
+
+          <div className="mt-6 flex flex-wrap gap-2">
+            {["React Native", "Expo"].map((skill) => (
+              <span
+                key={skill}
+                className="
+                  rounded-full
+                  border border-white/[0.08]
+                  bg-white/[0.025]
+                  px-3 py-1.5
+                  text-sm text-white/55
+                  transition
+                  group-hover:border-white/10
+                  group-hover:text-white/70
+                "
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
+        </article>
+
+        {/* Databases & Tools */}
+        <article
+          className="
+            group rounded-[26px]
+            border border-white/10
+            bg-white/[0.02]
+            p-7
+            transition-all duration-300
+            hover:border-white/20
+            hover:bg-white/[0.035]
+          "
+        >
+          <div className="flex items-center justify-between">
+            <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-white/30">
+              04 / Tools
+            </p>
+
+            <span className="text-xs text-white/15 group-hover:text-white/40">
+              →
+            </span>
+          </div>
+
+          <div className="mt-6 flex flex-wrap gap-2">
+            {[
+              "MySQL",
+              "Git",
+              "GitHub",
+              "VS Code",
+            ].map((skill) => (
+              <span
+                key={skill}
+                className="
+                  rounded-full
+                  border border-white/[0.08]
+                  bg-white/[0.025]
+                  px-3 py-1.5
+                  text-sm text-white/55
+                  transition
+                  group-hover:border-white/10
+                  group-hover:text-white/70
+                "
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
+        </article>
+
+        {/* Currently Exploring */}
+        <article
+          className="
+            group relative overflow-hidden
+            rounded-[26px]
+            border border-blue-400/10
+            bg-blue-400/[0.025]
+            p-7
+            transition-all duration-300
+            hover:border-blue-400/20
+            hover:bg-blue-400/[0.04]
+            sm:col-span-2
+          "
+        >
+          {/* Background glow */}
+          <div
+            className="
+              pointer-events-none absolute
+              -right-20 -top-24
+              h-56 w-56
+              rounded-full
+              bg-blue-500/[0.06]
+              blur-3xl
+            "
+            aria-hidden="true"
+          />
+
+          <div className="relative flex flex-col justify-between gap-6 sm:flex-row sm:items-start">
+
+            <div>
+              <div className="flex items-center gap-3">
+                <span className="relative flex h-2 w-2">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-blue-400 opacity-40" />
+                  <span className="relative h-2 w-2 rounded-full bg-blue-400" />
+                </span>
+
+                <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-blue-300/60">
+                  Currently Exploring
+                </p>
+              </div>
+
+              <p className="mt-3 max-w-lg text-sm leading-6 text-white/35">
+                Expanding beyond frontend development into backend systems,
+                cloud infrastructure, DevOps, and stronger problem-solving
+                foundations.
+              </p>
+            </div>
+
+            <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-white/20">
               IN PROGRESS
             </span>
           </div>
 
-          <p className="mt-3 max-w-2xl text-sm leading-6 text-white/35">
-            Expanding beyond the frontend into backend systems, cloud
-            infrastructure, DevOps, and deeper computer science fundamentals.
-          </p>
-
-          <div className="mt-6 flex flex-wrap gap-2">
+          <div className="relative mt-7 flex flex-wrap gap-2">
             {[
               "Node.js",
               "Backend Development",
@@ -1396,19 +1388,19 @@ export default function Home() {
                 key={skill}
                 className="
                   rounded-full
-                  border border-blue-400/10
-                  bg-blue-400/[0.03]
+                  border border-blue-300/[0.08]
+                  bg-black/20
                   px-3 py-1.5
-                  text-sm text-blue-200/50
+                  text-sm text-white/50
                 "
               >
                 {skill}
               </span>
             ))}
           </div>
-        </div>
-      </div>
+        </article>
 
+      </div>
     </div>
   </div>
 </section>
