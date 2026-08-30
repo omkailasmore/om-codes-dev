@@ -13,11 +13,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Om More | Developer",
+  title: "Om More | Developer Portfolio",
   description:
-    "Portfolio of Om More — developer, problem solver, and builder.",
+    "Portfolio of Om More — developer building full-stack applications, AI-powered projects, and practical digital experiences.",
 };
-
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
