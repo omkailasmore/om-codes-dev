@@ -123,3 +123,9 @@ If you like the project, consider giving the repository a ⭐.
 ### Built by **Om More** 🚀
 
 *Always building something.*
+
+---
+
+## 📜 License
+
+This project is open source and available for learning, experimentation, and personal use.
