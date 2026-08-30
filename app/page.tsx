@@ -74,7 +74,7 @@ export default function Home() {
 
       {/* Description */}
       <p className="mt-8 max-w-2xl text-base leading-7 text-white/45 sm:text-lg sm:leading-8">
-        Computer Science Engineering student at MIT-ADT University,
+        Computer Science Engineering Student at MIT-ADT University,
         Web Development Technical Lead at IEEE, and a builder exploring
         software, AI, IoT, backend systems, and the web.
       </p>
